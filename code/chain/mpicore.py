@@ -4,7 +4,7 @@
     Author: Fabian R. Lux
     Date:   01/12/2023
 
-    Useful class build around mpi4py.
+    Tools build around mpi4py.
 """
 import time
 import sys
