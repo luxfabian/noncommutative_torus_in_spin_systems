@@ -2,11 +2,9 @@
 
 Fabian R. Lux<sup>1,3</sup>, Sumit Ghosh<sup>2</sup>, Pascal Prass<sup>1</sup>, Emil Prodan <sup>3</sup> and Yuriy Mokrousov<sup>2,1</sup>
 
-*<sup>1</sup>Institute of Physics, Johannes Gutenberg University Mainz, 55099 Mainz, Germany*
-
-*<sup>2</sup>Peter Grunberg Institut and Institute for Advanced Simulation, Forsichungszentrum Julich and JARA, 52425 Julich, Germany*
-
-*<sup>3</sup>Department of Physics, Yeshiva University, New York, NY 10016, USA*
+*<sup>1</sup>Institute of Physics, Johannes Gutenberg University Mainz, 55099 Mainz, Germany.*
+*<sup>2</sup>Peter Grunberg Institut and Institute for Advanced Simulation, Forschungszentrum Julich and JARA, 52425 Julich, Germany.*
+*<sup>3</sup>Department of Physics, Yeshiva University, New York, NY 10016, USA.*
 
 DOI: [10.48550/arXiv.2103.01047](https://doi.org/10.48550/arXiv.2103.01047)
 
