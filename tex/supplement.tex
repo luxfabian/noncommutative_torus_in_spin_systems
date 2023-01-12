@@ -15,10 +15,8 @@
 
 %-- Format  -----------------------------------------
 
-%\usepackage[justification=raggedright]{caption, subcaption}
 \usepackage[breaklinks, unicode]{hyperref}
 \usepackage{url}
-
 
 %-- Science  ----------------------------------------
 
@@ -33,8 +31,7 @@
 \usepackage{mathtools}
 \usepackage{braket}
 
-\usepackage{amstext} % for \text macro
-%\usepackage{array}   % for \newcolumntype macro
+\usepackage{amstext} 
 \usepackage{booktabs}
 \newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
 
@@ -43,7 +40,6 @@
 \usepackage{tikz-cd}
 \usepackage{xcolor}
 \usepackage{graphicx}
-%\usepackage{float}
 
 %-- User  -------------------------------------------
 
@@ -70,8 +66,8 @@
 }
 
 \author{Fabian R. Lux}
-    \email{f.lux@uni-mainz.de}
-    \affiliation{\mainz}
+    \email{fabian.lux@yu.edu}
+    \affiliation{\mainz\nyc}
 
 \author{Sumit Ghosh}
    \affiliation{\pgi} 
@@ -494,7 +490,7 @@ provide derivations on the noncommutative $\deff$-torus.
 We again define our indices with respect to the index set $\mathcal{I} = \lbrace \tau_1 \cdots, \tau_d, u_1  \cdots, u_r  \rbrace$.
 Since
 \begin{align}
-	\partial_{\phi_k}  e^{i \boldsymbol{\phi} \cdot \vec{n}} = 2\pi  i n_k  e^{i \boldsymbol{\phi} \cdot \vec{n}},
+	\partial_{\phi_k}  e^{2\pi i \boldsymbol{\phi} \cdot \vec{n}} = 2\pi  i n_k  e^{2 \pi i \boldsymbol{\phi} \cdot \vec{n}},
 \end{align}
 one finds that the $u$-derivations are just given by the partial derivatives
 \begin{align}
