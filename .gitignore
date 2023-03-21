@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.npy
-*.png
+
 *.pdf
 *.nb
 *.DS_Store
