@@ -4,7 +4,6 @@ __pycache__/
 *$py.class
 *.npy
 
-*.pdf
 *.nb
 *.DS_Store
 output
@@ -12,6 +11,8 @@ moire_output
 # C extensions
 *.so
 
+main.pdf
+supplement.pdf
 mainNotes.bib
 supplementNotes.bib
 gfx/figure_01/data
