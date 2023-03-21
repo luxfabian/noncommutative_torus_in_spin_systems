@@ -12,6 +12,7 @@ moire_output
 # C extensions
 *.so
 
+mainNotes.bib
 supplementNotes.bib
 gfx/figure_01/data
 
