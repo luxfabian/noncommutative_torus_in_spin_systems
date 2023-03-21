@@ -12,6 +12,9 @@ moire_output
 # C extensions
 *.so
 
+supplementNotes.bib
+gfx/figure_01/data
+
 out/
 
 *.ipynb
