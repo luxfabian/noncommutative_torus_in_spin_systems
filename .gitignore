@@ -19,7 +19,6 @@ gfx/figure_01/data
 
 out/
 
-*.ipynb
 # Distribution / packaging
 .Python
 build/
