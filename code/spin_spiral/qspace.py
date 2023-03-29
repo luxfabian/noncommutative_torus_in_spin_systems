@@ -1,5 +1,5 @@
 """
-    ./code/chain/qspace.py
+    ./code/spin_spiral/qspace.py
 
     Author: Fabian R. Lux
     Date:   01/12/2023

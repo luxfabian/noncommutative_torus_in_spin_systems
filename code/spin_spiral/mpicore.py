@@ -1,5 +1,5 @@
 """
-    ./code/chain/mpicore.py
+    ./code/spin_spiral/mpicore.py
 
     Author: Fabian R. Lux
     Date:   01/12/2023

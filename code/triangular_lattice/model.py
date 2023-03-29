@@ -1,134 +1,143 @@
+"""
+    ./code/triangular_lattice/model.py
+
+    Author: Fabian R. Lux
+    Date:   01/12/2023
+
+    Sets up the Hamiltonian of the model and prepares for its
+    diagonalization.
+"""
 import numpy as np
 from numba import jit
 
 from lattice import R, G
-from constants import pi,s0,sx,sy,sz,rot120,rot240
+from constants import pi, s0, sx, sy, sz, rot120, rot240
 
 
-#-- hilbert space -----------------------------------------------------
+# -- hilbert space -----------------------------------------------------
 
 @jit(nopython=True)
 def construct_hilbert_space(n_x, n_y):
-   """
-      systematic labeling of quantum states
-   """
+    """
+       systematic labeling of quantum states
+    """
 
-   labels = np.zeros( (n_x*n_y*2, 3), dtype=np.integer )
-   states = np.zeros( (n_x, n_y, 2), dtype=np.integer  )
-   
-   #construct hilbert space
-   ii = 0
-   for i in range(n_x):
-      for j in range(n_y):
-         for s in range(2): #spin
-            labels[ii]    = np.array( [i,j,s] )
-            states[i,j,s] = ii
-            ii += 1
+    labels = np.zeros((n_x*n_y*2, 3), dtype=np.integer)
+    states = np.zeros((n_x, n_y, 2), dtype=np.integer)
 
-   return labels, states
+    # construct hilbert space
+    ii = 0
+    for i in range(n_x):
+        for j in range(n_y):
+            for s in range(2):  # spin
+                labels[ii] = np.array([i, j, s])
+                states[i, j, s] = ii
+                ii += 1
+
+    return labels, states
 
 
-#-- magnetic texture --------------------------------------------------
+# -- magnetic texture --------------------------------------------------
 
 @jit(nopython=True)
 def magnetization(i, j, theta, texture='skx'):
-   """
-      Unraveling of the noncommutative torus onto the skyrmion lattice
-   """
+    """
+       Unraveling of the noncommutative torus onto the skyrmion lattice
+    """
 
-   x = R(i,j)
-   n = np.zeros(3, dtype=np.float64)
+    x = R(i, j)
+    n = np.zeros(3, dtype=np.float64)
 
-   if texture=='skx':
-      #skyrmion triple-Q phase 
+    if texture == 'skx':
+        # skyrmion triple-Q phase
 
-      phase_1 =  ( theta*np.dot(x , G(0,1) ) )   
-      phase_2 =  ( theta*np.dot(x , G(-1,-1) ) ) + pi
-      phase_3 =  ( theta*np.dot(x , G(1, 0) ) )
+        phase_1 = (theta*np.dot(x, G(0, 1)))
+        phase_2 = (theta*np.dot(x, G(-1, -1))) + pi
+        phase_3 = (theta*np.dot(x, G(1, 0)))
 
-      n1 = np.array( [0, np.sin(phase_1), np.cos(phase_1)] )
-      n2 = np.dot( rot120, np.array( [0, np.sin(phase_2), np.cos(phase_2)] ) )
-      n3 = np.dot( rot240, np.array( [0, np.sin(phase_3), np.cos(phase_3)] ) ) 
+        n1 = np.array([0, np.sin(phase_1), np.cos(phase_1)])
+        n2 = np.dot(rot120, np.array([0, np.sin(phase_2), np.cos(phase_2)]))
+        n3 = np.dot(rot240, np.array([0, np.sin(phase_3), np.cos(phase_3)]))
 
-      n =  n1 + n2 + n3
-      n = n / np.linalg.norm(n)
+        n = n1 + n2 + n3
+        n = n / np.linalg.norm(n)
+
+    elif texture == 'sdw':
+        # spin-density wave triple-Q phase
+
+        phase_1 = (theta*np.dot(x, G(0, 1)))
+        phase_2 = (theta*np.dot(x, G(-1, -1))) + pi
+        phase_3 = (theta*np.dot(x, G(1, 0)))
+
+        n1 = np.array([np.sin(phase_1), 0, 0])
+        n2 = np.dot(rot120, np.array([np.sin(phase_2), 0, 0]))
+        n3 = np.dot(rot240, np.array([np.sin(phase_3), 0, 0]))
+
+        n = (n1 + n2 + n3) / 3.0
+
+    elif texture == 'fm':
+        n = np.array([0, 0, 1], dtype=np.float64)
+
+    return n
 
 
-   elif texture=='sdw':
-      #spin-density wave triple-Q phase 
-
-      phase_1 =  ( theta*np.dot(x , G(0,1) ) )   
-      phase_2 =  ( theta*np.dot(x , G(-1,-1) ) ) + pi
-      phase_3 =  ( theta*np.dot(x , G(1, 0) ) ) 
-
-      n1 = np.array( [np.sin(phase_1), 0, 0 ] )
-      n2 = np.dot( rot120, np.array( [np.sin(phase_2), 0, 0 ] ) )
-      n3 = np.dot( rot240, np.array( [np.sin(phase_3), 0,0 ] ) ) 
-
-      n = ( n1 + n2 + n3 )  / 3.0
-
-   elif texture=='fm':
-      n = np.array([0,0,1], dtype=np.float64)
-   
-   return n 
-
-
-#-- hamiltonian setup -------------------------------------------------
+# -- hamiltonian setup -------------------------------------------------
 
 @jit(nopython=True)
 def nearest_neighbors(i, j, n_x, n_y):
-   """
-      Returns a list of nearest neighbors to to the site i,j. 
-      The last number in each entry specify which translation was performed
-   """
+    """
+       Returns a list of nearest neighbors to to the site i,j. 
+       The last number in each entry specify which translation was performed
+    """
 
-   nn = [  
-      [ (i+1) % n_x, j],
-      [ i, (j+1) % n_y],
-      [ (i+1) % n_x, (j-1) % n_y]
-   ] 
+    nn = [
+        [(i+1) % n_x, j],
+        [i, (j+1) % n_y],
+        [(i+1) % n_x, (j-1) % n_y]
+    ]
 
-   return np.array(nn)
+    return np.array(nn)
+
 
 @jit(nopython=True)
 def set_hamiltonian(hamiltonian, states, n_x, n_y, theta, t, m, texture):
-   """
-      nearest neighbor hopping on the triangular lattice plus exchange
-   """
+    """
+       nearest neighbor hopping on the triangular lattice plus exchange
+    """
 
-   for i in range(n_x):
-      for j in range(n_y):
-         
-         #hopping 
-         nn = nearest_neighbors(i,j,n_x,n_y)
-         for site in nn:
-            for s in range(2):
-               ii = states[i,j,s]
-               jj = states[site[0], site[1], s]
+    for i in range(n_x):
+        for j in range(n_y):
 
-               hamiltonian[ii, jj] = t
-               hamiltonian[jj, ii] = t
+            # hopping
+            nn = nearest_neighbors(i, j, n_x, n_y)
+            for site in nn:
+                for s in range(2):
+                    ii = states[i, j, s]
+                    jj = states[site[0], site[1], s]
 
-         #onsite term
-         nvec   = magnetization(i,j,theta,texture)
-         onsite = m * (nvec[0]*sx + nvec[1]*sy + nvec[2]*sz)
-         for a in range(2):
-            for b in range(2):
-               ii = states[i,j,a]
-               jj = states[i,j,b]
-               hamiltonian[ii, jj] = onsite[a,b]
-               hamiltonian[jj, ii] = onsite[b,a]
+                    hamiltonian[ii, jj] = t
+                    hamiltonian[jj, ii] = t
+
+            # onsite term
+            nvec = magnetization(i, j, theta, texture)
+            onsite = m * (nvec[0]*sx + nvec[1]*sy + nvec[2]*sz)
+            for a in range(2):
+                for b in range(2):
+                    ii = states[i, j, a]
+                    jj = states[i, j, b]
+                    hamiltonian[ii, jj] = onsite[a, b]
+                    hamiltonian[jj, ii] = onsite[b, a]
 
 
-#-- linear algebra ----------------------------------------------------
+# -- linear algebra ----------------------------------------------------
 
 def spectrum(states, n_x, n_y, theta, t, m, texture):
-   """
-      calculate the spectrum by exact diagonalization
-   """
-   
-   dim = 2*n_x*n_y
-   H = np.zeros((dim,dim), dtype=np.complex128)
-   set_hamiltonian(H, states, n_x, n_y, theta, t, m, texture)
+    """
+       calculate the spectrum by exact diagonalization
+    """
 
-   return  np.linalg.eigvalsh(H, UPLO='U').real 
+    dim = 2*n_x*n_y
+    H = np.zeros((dim, dim), dtype=np.complex128)
+    set_hamiltonian(H, states, n_x, n_y, theta, t, m, texture)
+
+    return np.linalg.eigvalsh(H, UPLO='U').real

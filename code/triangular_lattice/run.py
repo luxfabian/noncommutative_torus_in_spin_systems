@@ -1,3 +1,12 @@
+"""
+    ./code/triangular_lattice/run.py
+
+    Author: Fabian R. Lux
+    Date:   01/12/2023
+
+    Run the simulation. Diagonalizes the Hamiltonian for a 2D skyrmion/vortex structure
+    on the triangular lattice for different wave vectors.
+"""
 import numpy as np
 from numba import jit
 

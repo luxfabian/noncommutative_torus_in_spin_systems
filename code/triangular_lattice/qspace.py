@@ -1,3 +1,12 @@
+"""
+    ./code/triangular_lattice/qspace.py
+
+    Author: Fabian R. Lux
+    Date:   01/12/2023
+
+    Determine wavevectors which are commensurate with the lattice
+    structure.
+"""
 from fractions import Fraction
 import numpy as np
 
