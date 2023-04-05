@@ -120,13 +120,13 @@ We believe that our results point a way towards a controlled design of topologic
 
 We consider a class of Hamiltonians which assume the form of the following nearest-neighbor tight-binding model on a $d$-dimensional Bravais lattice, given by
 \begin{align}
-    H  = t \sum_{\braket{\vec{k},\vec{l}} \in \mathbb{Z}^{2d}} \ket{\vec{k}}\bra{\vec{l}}
-    + \xc\sum_{\vec{k} \in \mathbb{Z}^d}  (\hatn (\vec{x}_\vec{k}) \cdot \bsigma) ~ \ket{\vec{k}}\bra{\vec{k}} ,
+    H  = t \sum_{\braket{\vec{i},\vec{j}} \in \mathbb{Z}^{2d}} \ket{\vec{i}}\bra{\vec{j}}
+    + \xc\sum_{\vec{i} \in \mathbb{Z}^d}  (\hatn (\vec{x}_\vec{i}) \cdot \bsigma) ~ \ket{\vec{i}}\bra{\vec{i}} ,
     \label{eq:hamiltonian}
 \end{align}
 where $\braket{}$ indicates the restriction to nearest-neighbor hoppings of strength $t$.
 The vector field $\hatn\colon \mathbb{R}^d \to S^2$ describes the coupling of the electronic states to a magnetic texture via the exchange term proportional to $\xc$. 
-To each site label $\vec{k} \in \mathbb{Z}^d$, we assign a real-space position $\vec{x}_\vec{k} = \sum_{i=1}^d k_i \vec{a}_i \in \mathbb{R}^d$ in a Bravais lattice spanned by $\lbrace \vec{a}_i \rbrace$. 
+To each site label $\vec{i} \in \mathbb{Z}^d$, we assign a real-space position $\vec{x}_\vec{i} = \sum_{l=1}^d \vec{i}_l \vec{a}_l \in \mathbb{R}^d$ in a Bravais lattice spanned by $\lbrace \vec{a}_i \rbrace$. 
 The reciprocal lattice is defined accordingly via $ \vec{b}_i \cdot \vec{a}_j  = 2\pi \delta_{ij}$.
 There is a natural action of the translation group $G = \mathbb{Z}^d$ on the $d$-dimensional lattice defined as
 $
@@ -138,7 +138,7 @@ The loss of translational symmetry renders the situation hopeless, as the space 
 \begin{figure*}[t!]
     \centering
     \includegraphics[width=0.85\linewidth]{../gfx/figure_01/figure_01.png}
-  \caption{
+  \caption{ 
   Fractal spectrum of a spin helix superposition. 
   Fig. a) demonstrates how the superposition of two spin helix states with $\theta_1 = 2\theta_2$ effectively leads to a noncollinear spin density wave which is not necessarily commensurate with the lattice.
   Tracing the evolution of individual phase factors $(\omega_1, \omega_2)$ along the lattice generates a path on the 2-torus $T^2$: the hull of the magnetic pattern.
@@ -191,14 +191,14 @@ Taking this into account, the Hamiltonian $H$ from Eq.~(\ref{eq:hamiltonian}) ca
 The basic idea is to distill the generators of the algebra by formulating $H$ in terms of these.
 This can be achieved by casting $H$ into the form~\footnote{For details, we refer to the Supplemental Material}:
 \begin{equation}
-    H =  \sum_{\vec{l} \in \mathbb{Z}^d} \hat{T}_\vec{l}  \sum_{\vec{k} \in \mathbb{Z}^d} h_\vec{l}( \boldsymbol{\phi} + \theta \vec{k} ) \ket{ \vec{k}} \bra{ \vec{k}} ,
+    H =  \sum_{\vec{i} \in \mathbb{Z}^d} \hat{T}_\vec{i}  \sum_{\vec{j} \in \mathbb{Z}^d} h_\vec{i}( \boldsymbol{\phi} + \theta \vec{j} ) \ket{ \vec{j}} \bra{ \vec{j}} ,
     \label{eq:covariant_hamiltonian}
 \end{equation}
 where $h\colon T^r \to \mathrm{Mat}_{2\times2} (\mathbb{C}^2)$,
 %Intuitively, 
-the sum over $\vec{k}$ visits all lattice sites, and the sum over $\vec{l}$ all neighbors.
+the sum over $\vec{j}$ visits all lattice sites, and the sum over $\vec{i}$ all neighbors.
 \revise{
-A similar reformulation of the Hamiltonian is also known from the Hofstadter model $H_\mathrm{HF} = t \sum_{\braket{\vec{k},\vec{l}} \in \mathbb{Z}^{2} \times \mathbb{Z}^2}e^{i a_{\vec{k} \vec{l}}} c_\vec{k}^\dagger c_\vec{l} $ describing electrons in a uniform magnetic field in two dimensions~\cite{Hofstadter1976}, where $a_{\vec{k} \vec{l}}$ is the integral of the magnetic vector potential from site $\vec{x}_\vec{l}$ to site $\vec{x}_k$.
+A similar reformulation of the Hamiltonian is also known from the Hofstadter model $H_\mathrm{HF} = t \sum_{\braket{\vec{i},\vec{j}} \in \mathbb{Z}^{2} \times \mathbb{Z}^2}e^{i a_{\vec{i} \vec{j}}} c_\vec{k}^\dagger c_\vec{l} $ describing electrons in a uniform magnetic field in two dimensions~\cite{Hofstadter1976}, where $a_{\vec{k} \vec{l}}$ is the integral of the magnetic vector potential from site $\vec{x}_\vec{l}$ to site $\vec{x}_k$.
 This Hamiltonian can be written as $H_\mathrm{HF} = \hat{S}_1 +  \hat{S}_2 + \mathrm{h.c.} $ in terms of the magnetic translation operators $\hat{S}_i = e^{i a_{i+1,i}} \hat{T}_i$~\cite{Zak1964}, where $\hat{T}_i$ to represents a unit lattice translation in direction $i$.
 These operators obey the commutation relation $\hat{S}_1 \hat{S}_2 = e^{2\pi i n_\Phi} \hat{S}_2 \hat{S}_1$, where $n_\Phi$ is the number of magnetic flux quanta per unit cell.
 The knowledge of this algebraic structure completely characterizes the topological properties of the associated Hofstadter spectrum~\cite{Hofstadter1976, Bellissard1994, Prodan2016}.
