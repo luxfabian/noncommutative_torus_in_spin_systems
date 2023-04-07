@@ -1,10 +1,10 @@
 # Unified topological characterization of electronic states in spin textures from noncommutative K-theory
 
-Fabian R. Lux<sup>1,3</sup>, Sumit Ghosh<sup>2</sup>, Pascal Prass<sup>1</sup>, Emil Prodan<sup>3</sup> and Yuriy Mokrousov<sup>2,1</sup>
+Fabian R. Lux<sup>1,2</sup>, Sumit Ghosh<sup>3</sup>, Pascal Prass<sup>1</sup>, Emil Prodan<sup>2</sup> and Yuriy Mokrousov<sup>1,3</sup>
 
 *<sup>1</sup>Institute of Physics, Johannes Gutenberg University Mainz, 55099 Mainz, Germany.*
-*<sup>2</sup>Peter Grunberg Institut and Institute for Advanced Simulation, Forschungszentrum Julich and JARA, 52425 Julich, Germany.*
-*<sup>3</sup>Department of Physics, Yeshiva University, New York, NY 10016, USA.*
+*<sup>2</sup>Department of Physics, Yeshiva University, New York, NY 10016, USA.*
+*<sup>3</sup>Peter Grunberg Institut and Institute for Advanced Simulation, Forschungszentrum Julich and JARA, 52425 Julich, Germany.*
 
 DOI: [10.48550/arXiv.2103.01047](https://doi.org/10.48550/arXiv.2103.01047)
 
