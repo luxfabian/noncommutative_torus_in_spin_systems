@@ -5,6 +5,8 @@
     Author: Fabian R. Lux
     Date:   01/12/2023
 
+    Superposition of two spin spirals in 1D.
+
     Sets up the Hamiltonian of the model and prepares for its
     diagonalization.
 """
