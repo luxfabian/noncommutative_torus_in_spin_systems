@@ -1,4 +1,5 @@
 \documentclass[
+    10pt,
     aps,
     prl,
     twocolumn,
@@ -65,8 +66,9 @@
 }
 
 \author{Fabian R. Lux}
-    \email{f.lux@uni-mainz.de}
+    \email{fabian.lux@yu.edu}
     \affiliation{\mainz}
+    \affiliation{\nyc}
 
 \author{Sumit Ghosh}
    \affiliation{\pgi} 
@@ -111,7 +113,7 @@ Furthermore, certain $3\vec{q}$ antiferromagnets (AFMs) have been shown to induc
 In this work, we demonstrate that the emergence of topological electronic states in arbitrary multi-$\vec{q}$ magnets is related to a fundamental restriction on the quantum mechanical observable algebra imposed by the magnetic texture. 
 Our approach, which is based on the methods of noncommutative K-theory, encompasses the adiabatic limit and the corresponding semiclassical theory as a special case~\cite{Su2020}, but extends 
 to arbitrary dimensions and makes sense for periodic as well as {\it aperiodic} spin arrangements on the atomic scale.
-We reveal that the observable algebra of generic multi-$\vec{q}$ states is given by the universal $C^\ast$ algebra of the so-called noncommutative hypertorus. As we show based on an effective model  this has a profound effect on the emergence of a wealth of topological electronic states in multi-$\vec{q}$ textures, which can be categorized and understood in a unified manner. 
+We reveal that the observable algebra of generic multi-$\vec{q}$ states is given by the universal $C^\ast$ algebra of the so-called noncommutative hypertorus. As we show based on an effective model this has a profound effect on the emergence of a wealth of topological electronic states in multi-$\vec{q}$ textures, which can be categorized and understood in a unified manner. 
 In particular, we relate the emergent topology to proper flavors of Chern numbers which do not rely on the smoothness of spin distribution in space, thus unraveling  exotic higher-dimensional quantum Hall physics of noncollinear spin systems.
 We believe that our results point a way towards a controlled design of topological states in various spin textures, whose character can be probed through the associated edge states and their dynamics arising in response to changes brought to textures experimentally in the laboratory. 
 
@@ -137,10 +139,10 @@ The loss of translational symmetry renders the situation hopeless, as the space 
 
 \begin{figure*}[t!]
     \centering
-    \includegraphics[width=0.85\linewidth]{../gfx/figure_01/figure_01.png}
+    \includegraphics[width=0.8\linewidth]{../gfx/figure_01/figure_01.png}
   \caption{ 
   Fractal spectrum of a spin helix superposition. 
-  Fig. a) demonstrates how the superposition of two spin helix states with $\theta_1 = 2\theta_2$ effectively leads to a noncollinear spin density wave which is not necessarily commensurate with the lattice.
+  Fig. a) demonstrates how the superposition of two spin helix states with $\theta_1 = 2\theta_2$.
   Tracing the evolution of individual phase factors $(\omega_1, \omega_2)$ along the lattice generates a path on the 2-torus $T^2$: the hull of the magnetic pattern.
   It is characterized by a nontrivial winding, looping through the hole of the torus.
   We calculate the DOS at $k_\mathrm{B} T = 0.01 t$ and $\xc / t =-1$ for a finite system with $N=1024$ sites and periodic boundary conditions. 
@@ -231,8 +233,8 @@ This algebra is known as the \emph{noncommutative torus} in $r+d$ dimensions~\ci
 Noncommutative K-theory classifies the projection operators which can arise from this observable algebra~\cite{Park2008,Blackadar1998, Connes1994}.
 Loosely speaking, two projections operators $P$ and $P'$ belong to the same equivalence class $[P]$ if they are related by a unitary transformation $P' = U P U^\dagger $. 
 The set of all $[P]$ defines the so-called $K_0$ group of the algebra $\mathcal{A}_\Theta$.
-Equivalently, one could say that $P$ and $P'$ are equivalent if there exists a continuous path between them.
-For the case of $\mathcal{A}_\Theta$, the K-theoretical properties are well-understood~\cite{X}.
+%Equivalently, one could say that $P$ and $P'$ are equivalent if there exists a continuous path between them.
+For the case of $\mathcal{A}_\Theta$, the K-theoretical properties are well-understood~\cite{Prodan2016}.
 In particular, one has $K_0( \mathcal{A}_\Theta) = \mathbb{Z}^{2^{r+d-1}}$, which is a compact way of saying that any class of topologically equivalent projection operators $[P]$ can be written as a linear combination of generators $[P] =\sum_J n_J [E_J]$, conveniently labelled by even cardinality subsets $J$ of $\mathcal{I}=\lbrace \tau_1 \cdots, \tau_d, u_1  \cdots, u_r \rbrace$~\SupplementalMaterial.
 }
 
@@ -315,10 +317,9 @@ This means we can use the IDS to map out some possible Chern numbers which can b
  \caption{
      Topological spectrum of 3-$\vec{q}$-states.
      Fig a) shows an example for skyrmionic 3-$\vec{q}$-states on the triangular lattice with $N=400$, $\theta_1 = 3/\sqrt{N}$ and periodic boundary conditions.
-     It is constructed from a coherent superposition of three spin spirals.
      The DOS at $k_\mathrm{B}T = 0.01t$, $\xc / t=-5$ is calculated by combining all system sizes $\sqrt{N} \in [19,79]\cap \mathbb{N}$ with  $\sqrt{N}\theta_1 \in \mathbb{Z}$.
      A series of gaps opens in the spectrum (some of them labelled with bullet points) whose topological character is revealed in the IDS plot of Fig c).
-     This procedure is repeated for the 3-$\vec{q}$ spin vortex crystal in Fig d), which is constructed for a coherent superposition of spin-density waves while keeping all other parameters the same. 
+     This procedure is repeated for the 3-$\vec{q}$ spin vortex crystal in Fig d).
     Again, the DOS in e) reveals gaps of topological character, as confirmed in f).
     The visible vertical features in e) are due to a reduced sampling density in $\theta_1$ at those points. 
  }  
@@ -352,7 +353,7 @@ Since the $\theta$-matrix is simply given by $\theta = (\theta_1, 2\theta_1)^T$,
 \end{equation}
 with $n_{\tau u}(g) =  n_{ \lbrace \tau_1, u_1 \rbrace}(g) + 2 n_{ \lbrace \tau_1, u_2 \rbrace}(g) $, where the coefficients can be identified with the first Chern numbers 
 $ \mathrm{Ch}_{ \lbrace \tau_i, u_i \rbrace} = n_{ \lbrace \tau_i, u_i \rbrace}$. 
-This result can be readily verified by evaluating Eq.~(\ref{eq:ids_sum}) and plotting the IDS versus $\theta_1$, color-coded by $\mu$ in Fig.~1.
+This result can be readily verified by plotting the IDS versus $\theta_1$, color-coded by $\mu$ in Fig.~1.
 Since the IDS is constant within a gap, the color exhibits discontinuous jumps which makes it possible to track the evolution of IDS for a specific gap as a function of $\theta_1$.
 The result is in perfect agreement with Eq.~(\ref{eq:k_prediction}), and makes it possible to assign a unique label $(n_\emptyset, n_{\tau u})$ to each gap $g$.
 Since the gaps with $n_{\tau u} \neq 0$ are characterized by a nontrivial first Chern number, the superposition of spin helices leads to a topologically nontrivial spectrum.
@@ -397,12 +398,12 @@ This serves to show that the generalized fluxes $\Theta$ can provide a connectin
 
 %-- Conclusion ------------------------------
 
-To summarize, in this work we put forward a new method to characterize electronic topological states emerging in real-space spin textures. 
-The method is based on the machinery of noncommutative K-theory, which has been applied with success in the past to  address the  properties of topological insulators ~\cite{Kitaev2009, Budich2013}. 
+To summarize, in this work we put forward a new method to characterize electronic topological states emerging in real-space spin textures which is based on the K-theory of $C^\ast$-algebras.
 In contrast to conventional methods of topological characterization based on smooth Berry phase properties such as the emergent field of skyrmions or Berry curvature of Bloch states $-$ whose meaning is lost in aperiodic, disordered or non-smooth textures $-$ the K-theory analysis can be used to predict and understand the appearance of nontrivial gaps in generic spin systems even of the latter kind. 
 As such, the K-theory categorization bears great promise for unraveling and shaping the hybrid topological properties of electronic states in complex spin textures which can be realized in realistic samples. 
 Particular exciting aspects to address in the future are the topology of three-dimensional textures which have the potential to harvest six-dimensional physics (nontrivial third Chern numbers are a theoretical possibility for the 3$\vec{q}$ cubic hedgehog lattice~\SupplementalMaterial), as well as the K-theory topological interpretation of spin fluctuations, dynamical excitations of real-space spin systems and the associated edge state physics.
 
+\vfill \newpage
 
 %-- acknowledgements ------------------------------
 
@@ -410,8 +411,6 @@ We  acknowledge  funding  under SPP 2137 ``Skyrmionics'' (project  MO  1731/7-1)
 This work was further supported by the Max Planck Graduate Center with the Johannes Gutenberg-Universit\"at Mainz (MPGC).
 Emil Prodan acknowledges financial support from the W.M. Keck Foundation and USA National Science Foundation through grant  DMR-1823800.
 
-
-\vfill \newpage
 
 %-- literature ------------------------------------
 
