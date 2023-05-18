@@ -67,7 +67,8 @@
 
 \author{Fabian R. Lux}
     \email{fabian.lux@yu.edu}
-    \affiliation{\mainz\nyc}
+    \affiliation{\mainz}
+	\affiliation{\nyc}
 
 \author{Sumit Ghosh}
    \affiliation{\pgi} 
@@ -307,7 +308,7 @@ which gives the relation presented in the manuscript.
 
 \subsection{A more precise description of the noncommutative torus}
 
-{\it The following section is adapted from \cite{Liu2020}}.   By defining $\boldsymbol{\alpha}=(\tau_1, \ldots, \tau_d, u_1,\ldots u_r )$, the commutation relations can be summarized to $\alpha_l \alpha_k = e^{2 \pi i \Theta_{lk}} \alpha_k  \alpha_l$, where
+{\it The following section is adapted from \cite{Liu2022}}. By defining $\boldsymbol{\alpha}=(\tau_1, \ldots, \tau_d, u_1,\ldots u_r )$, the commutation relations can be summarized to $\alpha_l \alpha_k = e^{2 \pi i \Theta_{lk}} \alpha_k  \alpha_l$, where
 \begin{equation}
     \Theta = \begin{pmatrix}
     0 & -\theta^T \\
@@ -370,7 +371,7 @@ The $C^\ast$-algebra associated to $\mathcal{A}_{\Theta}$ is then given by the c
 
 
 
-% For the case when the entries of $\Theta$ are irrational and rationally independent, the non-commutative torus accepts a unique trace, which is given by
+% For the case when the entries of $\Theta$ are irrational and rationally independent, the noncommutative torus accepts a unique trace, which is given by
 % \begin{equation}\label{Eq.NCTrace}
 % \Tt \Big ( \sum_{\vec{q} \in \ZM^\deff} a_{\vec{q}}\,\alpha_{\vec{q}} \Big ) = \tr~a_{\vec{0}}.
 % \end{equation}
@@ -391,9 +392,8 @@ The $C^\ast$-algebra associated to $\mathcal{A}_{\Theta}$ is then given by the c
 
 \subsection{Some general elements of K-theory}
 
-{\it The following section is adapted from \cite{Liu2020}}. The general goal of the K-theory of operator algebras is to supply all independent topological invariants that can be associated to projections and unitary elements of an algebra.
-The complex $K$-theory of  the algebra $\mathcal{A}_\Theta$ contains two $K$-groups, which can be described as follows. 
-The first one is the $K_0(\mathcal{A}_\Theta)$ group, which classifies the projections
+{\it The following section is adapted from \cite{Liu2022}}. The general goal of the K-theory of operator algebras is to supply all independent topological invariants that can be associated to projections and unitary elements of an algebra.
+In particular, the $K$-theory group $K_0(\mathcal{A}_\Theta)$ classifies the projections
 \begin{equation}
 p \in \Mm_\infty \otimes \Aa_\Theta, \quad p^2 = p^\ast=p,
 \end{equation}
@@ -401,11 +401,10 @@ with respect to the von~Neumann equivalence relation
 \begin{equation}\label{Eq-EquivRelation}
 p \sim p' \quad \mbox{iff}  \quad p=vv' \ \  {\rm and} \ \ p' = v'v, 
 \end{equation}
-for some partial isometries $v$ and $v'$ with  $ vv', v'v \in \Mm_\infty \otimes \Aa_\Theta$. Above, $\Mm_N$ is the algebra of $N \times N$ matrices with complex entries and $M_\infty$ is the direct limit of these algebras. For any projection $p$ from $\Mm_\infty \otimes \Aa_\Theta$, there exists $N \in \NM$ such that $p \in \Mm_N \otimes \Aa_\Theta$, hence we do not really need to work with infinite matrices. However, $\Mm_N$ can be canonically embedded into $\Mm_\infty$ and this convenient, because it enables $N$ to take flexible values.
-
-\vspace{0.2cm}
-
-We need to answer two questions: 1) How does the equivalence relation \eqref{Eq-EquivRelation} supply topological information? 2) Why do we need the tensoring by $\Mm_\infty$? Both questions find their answers in the following remark. There are two additional equivalence relations for projections \cite[p.~18]{Park2008}:
+for some partial isometries $v$ and $v'$ with  $ vv', v'v \in \Mm_\infty \otimes \Aa_\Theta$. 
+$\Mm_N$ is the algebra of $N \times N$ matrices with complex entries and $M_\infty$ is the direct limit of these algebras. 
+For any $p$ from $\Mm_\infty \otimes \Aa_\Theta$, there exists $N \in \NM$ such that $p \in \Mm_N \otimes \Aa_\Theta$, hence we do not really need to work with infinite matrices. However, $\Mm_N$ can be canonically embedded into $\Mm_\infty$ and this convenient, because it enables $N$ to take flexible values.
+There are two further equivalence relations for projections which could be used, and which lead to the same group $K_0(\mathcal{A}_\Theta)$ \cite[p.~18]{Park2008}:
 \begin{itemize}
 \item  Similarity equivalence:
 \begin{equation}
@@ -418,30 +417,29 @@ p \sim_h p' \quad  {\rm iff} \quad \bm p(0)=p \ \  {\rm and} \ \  \bm p(1) = p'
 \end{equation}
 for some continuous function $\bm p : [0,1] \rightarrow \Mm_\infty \otimes \Aa_\Theta$, which always returns a projection. 
 \end{itemize}
-The homotopy equivalence is certainly the topological equivalence as understood by condensed matter physicists. Now, in general, the three equivalence relations are different, but 
-tensoring $\Aa_\Theta$ by $\Mm_\infty$ makes them entirely equivalent. For topological classification, $\sim_h$ is the most interesting relation, but, as we shall see, the relation $\sim$ is essential for understanding the spectral properties of Hamiltonians. 
-
-\vspace{0.2cm}
-
-The equivalence class of a projection $p$ will be denoted by $[p]_0$, hence, $[p]_0$ is the set
+Homotopy equivalence is the topological equivalence as understood by condensed matter physicists. 
+% While the three equivalence relations are different in general, tensoring $\Aa_\Theta$ by $\Mm_\infty$ makes them entirely equivalent. For topological classification, $\sim_h$ is the most interesting relation, but, as we shall see, the relation $\sim$ is essential for understanding the spectral properties of Hamiltonians. 
+The equivalence class of a projection $p$ will be denoted by $[p]$, i.e., $[p]$ is the set
 \begin{equation}
-[p]_0= \big \{p' \in \Mm_\infty \otimes \Aa_\Theta \, ,  \ p' \sim p \big \}.
+[p]= \big \{p' \in \Mm_\infty \otimes \Aa_\Theta \, ,  \ p' \sim p \big \}.
 \end{equation}
 If $p \in \Mm_N \otimes \Aa_\Theta$ and $p' \in \Mm_M \otimes \Aa_\Theta$ are two projections, then $\begin{pmatrix} p & 0 \\ 0 & p' \end{pmatrix}$ is a projection from $\Mm_{N+M} \otimes \Aa_\Theta$ and one can define the addition
 \begin{equation}
-[p]_0 \oplus [p']_0 = \left [ \begin{matrix} p & 0 \\ 0 & p' \end{matrix} \right ]_0,
+[p] \oplus [p'] = \left [  \left( \begin{matrix} p & 0 \\ 0 & p' \end{matrix} \right) \right ],
 \end{equation}
-which provides a semigroup structure on the set of equivalence classes. Then $K_0(\Aa_\Theta)$ is its  enveloping group  \cite{Blackadar1998} and, for the non-commutative $\deff$-torus,
+which provides a semigroup structure on the set of equivalence classes. Then $K_0(\Aa_\Theta)$ is its  enveloping group \cite{Blackadar1998} and, for the noncommutative $\deff$-torus,
 \begin{equation}\label{Eq:K0} 
 K_0(\Aa_\Theta) = \ZM^{2^{\deff-1}},
 \end{equation}
 regardless of $\Theta$ and where $\deff = r+d$.
-As such, there are $2^{\deff-1}$ generators $[e_J]_0$, which can be uniquely labeled by the subsets of indices $J \subseteq \{1,\ldots,d\}$ of even cardinality \cite{Prodan2016}. 
-Throughout, the cardinality of a set will be indicated by $|\cdot |$. Eq.~\eqref{Eq:K0} assures us that, for any projection $p$ from $\Mm_\infty \otimes \Aa_\Theta$, one has
+As such, there are $2^{\deff-1}$ generators $[e_J]$, which can be uniquely labeled by the subsets of indices $J \subseteq \{1,\ldots,d\}$ of even cardinality \cite{Prodan2016}. Eq.~\eqref{Eq:K0} assures us that, for any projection $p$ from $\Mm_\infty \otimes \Aa_\Theta$, one has
 \begin{equation}\label{Eq-GenExpansion}
-[p]_0  = \sum_{J \subseteq \{1,\ldots,\deff \}}^{|J|={\rm even}} n_J \, [e_J]_0, 
+[p]  = \sum_{J \subseteq \{1,\ldots,\deff \}}^{|J|={\rm even}} n_J \, [e_J], 
 \end{equation} 
-where the coefficients $n_J$ are integer numbers that do not change as long as $p$ is deformed inside its $K_0$-class. Specifically, two homotopically equivalent projections will display the same coefficients, hence $\{n_J\}_{|J|={\rm even}}$ represent the {\it complete} set of topological invariants associated to the projection $p$. Furthermore, two projections that display the same set of coefficients are necessarily in the same $K_0$-class. Let us point out that the coefficient $n_J$ corresponding to $J=\{1,2,\ldots,\deff \}$ is called the top coefficient and is equal to the strong Chern number associated to the projection $p$ \cite[Sec.~5.7]{Prodan2016}.
+where the coefficients $n_J$ are integer numbers that do not change as long as $p$ is deformed inside its $K_0$-class. 
+Specifically, two homotopically equivalent projections will display the same coefficients, hence $\{n_J\}_{|J|={\rm even}}$ represent the {\it complete} set of topological invariants associated to the projection $p$. 
+Furthermore, two projections that display the same set of coefficients are necessarily in the same $K_0$-class. 
+%Let us point out that the coefficient $n_J$ corresponding to $J=\{1,2,\ldots,\deff \}$ is called the top coefficient and is equal to the strong Chern number associated to the projection $p$ \cite[Sec.~5.7]{Prodan2016}.
 
 % \vspace{0.2cm}
 
@@ -449,7 +447,7 @@ where the coefficients $n_J$ are integer numbers that do not change as long as $
 % \begin{equation}
 % u \in \Mm_\infty \otimes \Aa_\Theta, \quad u u^\ast = u^\ast u=1,
 % \end{equation}
-% with respect to the homotopy equivalence relation. The class of $u\in \Mm_\infty \otimes \Aa_\Theta$ will be denoted by $[u]_1$. For the non-commutative $d$-torus,
+% with respect to the homotopy equivalence relation. The class of $u\in \Mm_\infty \otimes \Aa_\Theta$ will be denoted by $[u]_1$. For the noncommutative $d$-torus,
 % \begin{equation}
 % K_1(\Aa_\Theta) = \ZM^{2^{\deff-1}},
 % \end{equation}
@@ -501,7 +499,7 @@ For the $\tau$-derivations, the representation on the Hilbert space evaluates to
 \begin{align}
 	\pi_{\boldsymbol{\phi}} (\partial_{\tau_k} A) = i [ \hat{X}_k, \pi_{\boldsymbol{\phi}} (A)],
 \end{align}
-where $\hat{\vec{X}} = \sum_{\vec{q}\in \mathbb{Z}^d} \ket{\vec{q}} \bra{\vec{q}}$ is the position operator on the Hilbert space.
+where $\hat{\vec{X}} = \sum_{\vec{q}\in \mathbb{Z}^d} \vec{x}_{\vec{q}}\ket{\vec{q}} \bra{\vec{q}}$ is the position operator on the Hilbert space.
 
 
 % For an operator $\hat{A} = \pi_{\boldsymbol{\phi}} (A)$, we define the crystal momentum representation
@@ -666,7 +664,7 @@ And, in the limit of smooth textures and ergodic action,
 	\sum_{\vec{q}}\tau_{\vec{q}} \rhd \to \int\limits_{\Omega }\dd^r \boldsymbol{\phi} .
 \end{align}
 
-\subsection{Chern number}
+\subsection{Noncommutative Chern numbers}
 
 Now that the differential calculus on the torus is established, the Chern numbers can be defined.
 The Chern number of a projection $P$ to gap $g$ and associated to a subset of indices $J$ of even cardinality is given by
@@ -785,9 +783,9 @@ Real- and reciprocal space lattice vectors are introduced via
 \end{align}
 With respect to these lattice vectors, the $\vec{q}$-vectors of the texture are given by
 \begin{align}
-	\vec{q_1} &= \theta_1 \vec{b}_1 \\
-	\vec{q_2} &= \theta_1\vec{b}_2\\
-	\vec{q_3} &= \theta_1(-\vec{b}_1- \vec{b_2}) .
+	\vec{q_1} &= \theta_1 \vec{b}_2 \\
+	\vec{q_2} &= \theta_1\vec{b}_1 \\ 
+	\vec{q_3} &= \theta_1(-\vec{b}_1- \vec{b_2}) 
 \end{align}
 One can confirm that these vectors form the vertices of an equilateral triangle and that $\sum_i \vec{q}_i = 0$.
 From the definition follows that the $\theta$-matrix is given by
@@ -802,7 +800,7 @@ From the definition follows that the $\theta$-matrix is given by
 \end{equation}
 As initial phases we take $\boldsymbol{\phi} = (0,0,\pi)$.  
 The respective Chern number decomposition can be found in table \ref{tab:3q_2d} at the end of this document (the analogous case for a 2$\vec{q}$-state in $d=1$ and $d=2$ is shown in \ref{tab:2q_1d} and  \ref{tab:2q_2d} respectively).
-Let $R^z_{2\pi/3}$ represent a $2\pi/3$ rotation around the $z$-axis.
+Let $R^z_{2\pi/3}$ represent a $-2\pi/3$ rotation around the $z$-axis.
 Then we write
 \begin{align}
 	\hatn_\mathrm{SkX}(\vec{x}) &=  \sum_{i=1}^{3 } (R^z_{2\pi/3})^{i-1} \hatn_\mathrm{hx} ( ((R^z_{2\pi/3})^{i-1} \vec{q}_1 )\cdot \vec{x}/ (2\pi) + \phi_i ) 
@@ -909,10 +907,9 @@ The emergent flux in this case is
 \end{equation}
 
 
+%\subsubsection*{Transformed translation operator in two dimensions}
 
-
-\subsubsection{Transformed translation operator in two dimensions}
-
+{\bf Transformed translation operator in two dimensions}. 
 Applying the translation operator to the previously defined unitary operator, we find
 \begin{align}
 	\hat{T}_\vec{m} U( \hat{\vec{x}}) \hat{T}_\vec{m}^\dagger
@@ -1117,58 +1114,57 @@ The latter can be identified with the top-level Chern number
 	\left\{u_1,u_2\right\} & n_{\left\{u_1,u_2\right\}} \\
 	\left\{\tau _1,\tau _2,u_1,u_2\right\} & n_{\left\{\tau _1,\tau _2,u_1,u_2\right\}}
 \end{tabular}
-\caption{Chern number expansion for a 2$\vec{q}$-state in $d=2$ dimensions with $\theta = \theta_1 \id_2$ (an example would be the 2-$\vec{q}$ skyrmion lattice).
+\caption{Chern number expansion for a 2$\vec{q}$-state in $d=2$ dimensions with $\theta = \theta_1 ((0,1),(1,0))$ (an example would be the 2-$\vec{q}$ skyrmion lattice).
 }
 \label{tab:2q_2d}
 \end{table}
 
 
-
 \begin{turnpage}
-\begin{table}
-\begin{tabular}{L|L}
-	J' & \mathrm{Ch}_{J'} \\ \toprule
-	 \{\} & \theta _1^2 n_{\left\{\tau _1,\tau _2,u_1,u_2\right\}}+\theta _1^2 n_{\left\{\tau
-		_1,\tau _2,u_1,u_3\right\}}+\theta _1^2 n_{\left\{\tau _1,\tau
-		_2,u_2,u_3\right\}}+\theta _1 n_{\left\{\tau _1,u_2\right\}}+\theta _1 n_{\left\{\tau
-		_1,u_3\right\}}+\theta _1 n_{\left\{\tau _2,u_1\right\}}+\theta _1 n_{\left\{\tau
-		_2,u_3\right\}}+n_{\{\}} \\
-	\left\{\tau _1,\tau _2\right\} & n_{\left\{\tau _1,\tau _2\right\}} \\
-	\left\{\tau _1,u_1\right\} & \theta _1 n_{\left\{\tau _2,u_3\right\}}+\theta _1
-	n_{\left\{\tau _1,\tau _2,u_1,u_3\right\}}+n_{\left\{\tau _1,u_1\right\}} \\
-	\left\{\tau _1,u_2\right\} & \theta _1 n_{\left\{\tau _2,u_1\right\}}+\theta _1
-	n_{\left\{\tau _2,u_3\right\}}+\theta _1 n_{\left\{\tau _1,\tau
-		_2,u_1,u_2\right\}}+\theta _1 n_{\left\{\tau _1,\tau
-		_2,u_2,u_3\right\}}+n_{\left\{\tau _1,u_2\right\}} \\
-	\left\{\tau _1,u_3\right\} & \theta _1 n_{\left\{\tau _2,u_1\right\}}+\theta _1
-	n_{\left\{\tau _1,\tau _2,u_1,u_3\right\}}+n_{\left\{\tau _1,u_3\right\}} \\
-	\left\{\tau _2,u_1\right\} & \theta _1 n_{\left\{\tau _1,u_2\right\}}+\theta _1
-	n_{\left\{\tau _1,u_3\right\}}+\theta _1 n_{\left\{\tau _1,\tau
-		_2,u_1,u_2\right\}}+\theta _1 n_{\left\{\tau _1,\tau
-		_2,u_1,u_3\right\}}+n_{\left\{\tau _2,u_1\right\}} \\
-	\left\{\tau _2,u_2\right\} & \theta _1 n_{\left\{\tau _1,u_3\right\}}+\theta _1
-	n_{\left\{\tau _1,\tau _2,u_2,u_3\right\}}+n_{\left\{\tau _2,u_2\right\}} \\
-	\left\{\tau _2,u_3\right\} & \theta _1 n_{\left\{\tau _1,u_2\right\}}+\theta _1
-	n_{\left\{\tau _1,\tau _2,u_2,u_3\right\}}+n_{\left\{\tau _2,u_3\right\}} \\
-	\left\{u_1,u_2\right\} & \theta _1 n_{\left\{\tau _1,u_3\right\}}+\theta _1
-	n_{\left\{\tau _2,u_3\right\}}+\theta _1 n_{\left\{\tau _1,u_1,u_2,u_3\right\}}+\theta
-	_1 n_{\left\{\tau _2,u_1,u_2,u_3\right\}}+n_{\left\{u_1,u_2\right\}} \\
-	\left\{u_1,u_3\right\} & \theta _1 n_{\left\{\tau _1,u_2\right\}}+\theta _1
-	n_{\left\{\tau _1,u_1,u_2,u_3\right\}}+n_{\left\{u_1,u_3\right\}} \\
-	\left\{u_2,u_3\right\} & \theta _1 n_{\left\{\tau _2,u_1\right\}}+\theta _1
-	n_{\left\{\tau _2,u_1,u_2,u_3\right\}}+n_{\left\{u_2,u_3\right\}} \\
-	\left\{\tau _1,\tau _2,u_1,u_2\right\} & n_{\left\{\tau _1,\tau _2,u_1,u_2\right\}} \\
-	\left\{\tau _1,\tau _2,u_1,u_3\right\} & n_{\left\{\tau _1,\tau _2,u_1,u_3\right\}} \\
-	\left\{\tau _1,\tau _2,u_2,u_3\right\} & n_{\left\{\tau _1,\tau _2,u_2,u_3\right\}} \\
-	\left\{\tau _1,u_1,u_2,u_3\right\} & n_{\left\{\tau _1,u_1,u_2,u_3\right\}} \\
-	\left\{\tau _2,u_1,u_2,u_3\right\} & n_{\left\{\tau _2,u_1,u_2,u_3\right\}}
-\end{tabular}
-\caption{Chern number expansion for $ \theta = \theta_1 (( 
-	0, 1),
-	(  1,0 ),
-	( -1,-1 )) $ (the 3-$\vec{q}$, triangular skyrmion lattice).}
-\label{tab:3q_2d}
-\end{table}
+	\begin{table}
+	\begin{tabular}{L|L}
+		J' & \mathrm{Ch}_{J'} \\ \toprule
+		 \{\} & \theta _1^2 n_{\left\{\tau _1,\tau _2,u_1,u_2\right\}}+\theta _1^2 n_{\left\{\tau
+			_1,\tau _2,u_1,u_3\right\}}+\theta _1^2 n_{\left\{\tau _1,\tau
+			_2,u_2,u_3\right\}}+\theta _1 n_{\left\{\tau _1,u_2\right\}}+\theta _1 n_{\left\{\tau
+			_1,u_3\right\}}+\theta _1 n_{\left\{\tau _2,u_1\right\}}+\theta _1 n_{\left\{\tau
+			_2,u_3\right\}}+n_{\{\}} \\
+		\left\{\tau _1,\tau _2\right\} & n_{\left\{\tau _1,\tau _2\right\}} \\
+		\left\{\tau _1,u_1\right\} & \theta _1 n_{\left\{\tau _2,u_3\right\}}+\theta _1
+		n_{\left\{\tau _1,\tau _2,u_1,u_3\right\}}+n_{\left\{\tau _1,u_1\right\}} \\
+		\left\{\tau _1,u_2\right\} & \theta _1 n_{\left\{\tau _2,u_1\right\}}+\theta _1
+		n_{\left\{\tau _2,u_3\right\}}+\theta _1 n_{\left\{\tau _1,\tau
+			_2,u_1,u_2\right\}}+\theta _1 n_{\left\{\tau _1,\tau
+			_2,u_2,u_3\right\}}+n_{\left\{\tau _1,u_2\right\}} \\
+		\left\{\tau _1,u_3\right\} & \theta _1 n_{\left\{\tau _2,u_1\right\}}+\theta _1
+		n_{\left\{\tau _1,\tau _2,u_1,u_3\right\}}+n_{\left\{\tau _1,u_3\right\}} \\
+		\left\{\tau _2,u_1\right\} & \theta _1 n_{\left\{\tau _1,u_2\right\}}+\theta _1
+		n_{\left\{\tau _1,u_3\right\}}+\theta _1 n_{\left\{\tau _1,\tau
+			_2,u_1,u_2\right\}}+\theta _1 n_{\left\{\tau _1,\tau
+			_2,u_1,u_3\right\}}+n_{\left\{\tau _2,u_1\right\}} \\
+		\left\{\tau _2,u_2\right\} & \theta _1 n_{\left\{\tau _1,u_3\right\}}+\theta _1
+		n_{\left\{\tau _1,\tau _2,u_2,u_3\right\}}+n_{\left\{\tau _2,u_2\right\}} \\
+		\left\{\tau _2,u_3\right\} & \theta _1 n_{\left\{\tau _1,u_2\right\}}+\theta _1
+		n_{\left\{\tau _1,\tau _2,u_2,u_3\right\}}+n_{\left\{\tau _2,u_3\right\}} \\
+		\left\{u_1,u_2\right\} & \theta _1 n_{\left\{\tau _1,u_3\right\}}+\theta _1
+		n_{\left\{\tau _2,u_3\right\}}+\theta _1 n_{\left\{\tau _1,u_1,u_2,u_3\right\}}+\theta
+		_1 n_{\left\{\tau _2,u_1,u_2,u_3\right\}}+n_{\left\{u_1,u_2\right\}} \\
+		\left\{u_1,u_3\right\} & \theta _1 n_{\left\{\tau _1,u_2\right\}}+\theta _1
+		n_{\left\{\tau _1,u_1,u_2,u_3\right\}}+n_{\left\{u_1,u_3\right\}} \\
+		\left\{u_2,u_3\right\} & \theta _1 n_{\left\{\tau _2,u_1\right\}}+\theta _1
+		n_{\left\{\tau _2,u_1,u_2,u_3\right\}}+n_{\left\{u_2,u_3\right\}} \\
+		\left\{\tau _1,\tau _2,u_1,u_2\right\} & n_{\left\{\tau _1,\tau _2,u_1,u_2\right\}} \\
+		\left\{\tau _1,\tau _2,u_1,u_3\right\} & n_{\left\{\tau _1,\tau _2,u_1,u_3\right\}} \\
+		\left\{\tau _1,\tau _2,u_2,u_3\right\} & n_{\left\{\tau _1,\tau _2,u_2,u_3\right\}} \\
+		\left\{\tau _1,u_1,u_2,u_3\right\} & n_{\left\{\tau _1,u_1,u_2,u_3\right\}} \\
+		\left\{\tau _2,u_1,u_2,u_3\right\} & n_{\left\{\tau _2,u_1,u_2,u_3\right\}}
+	\end{tabular}
+	\caption{Chern number expansion for $ \theta = \theta_1 (( 
+		0, 1),
+		(  1,0 ),
+		( -1,-1 )) $ (the 3-$\vec{q}$, triangular skyrmion lattice).}
+	\label{tab:3q_2d}
+	\end{table}
 \end{turnpage}
 
 

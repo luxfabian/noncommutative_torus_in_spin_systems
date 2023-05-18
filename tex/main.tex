@@ -87,8 +87,8 @@
 
 \begin{abstract}
 The nontrivial topology of spin systems such as skyrmions in real space can promote complex electronic states.
-Here, we provide a general viewpoint at the emergence of topological electronic states in spin systems based on the methods of noncommutative K-theory. 
-By realizing that the structure of the observable algebra of spin textures is determined by the algebraic properties of the noncommutative hypertorus, we arrive at a unified understanding of topological electronic states which we predict to arise in various noncollinear setups. 
+Here, we provide a general viewpoint at the emergence of topological spectral gaps in spin systems based on the methods of noncommutative K-theory. 
+By realizing that the structure of the observable algebra of spin textures is determined by the algebraic properties of the noncommutative torus, we arrive at a unified understanding of topological electronic states which we predict to arise in various noncollinear setups. 
 The power of our approach lies in an ability to categorize emergent topological states algebraically without referring to smooth real- or reciprocal-space quantities. 
 This opens a way towards an educated design of topological phases in aperiodic, disordered, or non-smooth textures of spins and charges containing topological defects. 
 \end{abstract}
@@ -100,7 +100,7 @@ This opens a way towards an educated design of topological phases in aperiodic, 
 
 Noncollinear magnetism is of central importance to many ideas in the field of spintronics and future information technology~\cite{Vedmedenko2020, Back2020}.
 Recently, a diverse class of so-called multi-$\vec{q}$ magnets $-$ characterized by a phase-coherent superposition of multiple spin-spirals $-$ has received particular attention~\cite{Okubo2012, Takagi2018, Hirschberger2019, Fujishiro2019, Okumura2020}.
-Experimentally established examples include one-dimensional (1D) helicoids in chiral magnets~\cite{Adams2012,Janoschek2013}, the two-dimensional skyrmion crystal (SkX) of \ce{MnSi}~\cite{Neubauer2009} and the three-dimensional hedgehog lattice (HL) in \ce{MnGe}~\cite{Tanigaki2015}.
+Experimentally established examples include one-dimensional (1D) helicoids in chiral magnets~\cite{Adams2012,Janoschek2013}, the two-dimensional skyrmion crystal of \ce{MnSi}~\cite{Neubauer2009} and the three-dimensional hedgehog lattice (HL) in \ce{MnGe}~\cite{Tanigaki2015}.
 The interest in multi-$\vec{q}$ states is fueled by their connection to emergent electromagnetic fields which leads the way to rich electronic physics~\cite{ Bliokh2005, Fujita2011}
 and can even drive  the opening of topological band gaps in the electronic spectrum~\cite{Hamamoto2015, Goebel2017, Goebel2018}.
 In the adiabatic limit of smooth magnetization textures and strong coupling, this effect can be attributed to the real-space topology of the magnetization texture~\cite{Bruno2004, EverschorSitte2014}.
@@ -108,12 +108,13 @@ For example, a magnetic skyrmion will carry a quantized magnetic flux which is p
 The mechanism by which a lattice of skyrmions can open a band gap can therefore be interpreted as the formation of Landau levels.
 It is however unclear, to what extent this interpretation can be upheld as the adiabatic approximation looses validity.
 For example, the lattice constant of the HL phase in \ce{MnGe} is only of the order of only $\SI{3}{\nano\meter}$.
-Furthermore, certain $3\vec{q}$ antiferromagnets (AFMs) have been shown to induce the opening of topological band gaps, even though no topological index can be associated to the real-space texture~\cite{Ndiaye2019, Feng2020}.
+Furthermore, certain $3\vec{q}$ antiferromagnets have been shown to induce the opening of topological band gaps, even though no topological index can be associated to the real-space texture~\cite{Ndiaye2019, Feng2020}.
 
 In this work, we demonstrate that the emergence of topological electronic states in arbitrary multi-$\vec{q}$ magnets is related to a fundamental restriction on the quantum mechanical observable algebra imposed by the magnetic texture. 
 Our approach, which is based on the methods of noncommutative K-theory, encompasses the adiabatic limit and the corresponding semiclassical theory as a special case~\cite{Su2020}, but extends 
 to arbitrary dimensions and makes sense for periodic as well as {\it aperiodic} spin arrangements on the atomic scale.
-We reveal that the observable algebra of generic multi-$\vec{q}$ states is given by the universal $C^\ast$ algebra of the so-called noncommutative hypertorus. As we show based on an effective model this has a profound effect on the emergence of a wealth of topological electronic states in multi-$\vec{q}$ textures, which can be categorized and understood in a unified manner. 
+We reveal that the observable algebra of generic multi-$\vec{q}$ states is given by the universal $C^\ast$-algebra of the so-called noncommutative torus. 
+As we show based on an effective model this has a profound effect on the emergence of a wealth of topological electronic states in multi-$\vec{q}$ textures, which can be categorized and understood in a unified manner. 
 In particular, we relate the emergent topology to proper flavors of Chern numbers which do not rely on the smoothness of spin distribution in space, thus unraveling  exotic higher-dimensional quantum Hall physics of noncollinear spin systems.
 We believe that our results point a way towards a controlled design of topological states in various spin textures, whose character can be probed through the associated edge states and their dynamics arising in response to changes brought to textures experimentally in the laboratory. 
 
@@ -157,7 +158,7 @@ The loss of translational symmetry renders the situation hopeless, as the space 
 
 There is however an important subclass of realistic magnetic textures whose spectra are completely characterized by the topological properties of their observable algebras.
 Namely, it is not uncommon that such a magnetic texture is described by one or more phase factors through which the real-space dependence will enter the Hamiltonian. 
-These are generally known as multi-$\vec{q}$ states and encompass 1D textures such as spin-spirals, but also magnetic skyrmion lattices such as the famous A phase of \ce{MnSi}.
+These are generally known as multi-$\vec{q}$ states and encompass 1D textures such as spin-spirals, but also magnetic skyrmion lattices such as the famous $A$ phase of \ce{MnSi}~\cite{Neubauer2009}.
 Each multi-$\vec{q}$ texture is characterized by
 the presence of $r$ distinct vectors $\vec{q}_i$ with $i=1,\cdots,r$ expressed in terms of the reciprocal lattice as $\vec{q}_i = \sum_{j=1}^d \theta_{ij} \vec{b}_j$.
 The dependence on the $\vec{q}$-vectors enters the magnetization texture $\hatn$ via the
@@ -189,7 +190,7 @@ If at least one $\theta_{ij}$ is irrational, $\Omega$ forms a dense subset of $T
 
 %-- observable algebra ----------------------------
 
-Taking this into account, the Hamiltonian $H$ from Eq.~(\ref{eq:hamiltonian}) can now be rewritten in a way, which makes the observable algebra apparent.
+Taking this into account, the Hamiltonian $H$ from Eq.~(\ref{eq:hamiltonian}) can now be rewritten in a way that makes the observable algebra apparent.
 The basic idea is to distill the generators of the algebra by formulating $H$ in terms of these.
 This can be achieved by casting $H$ into the form~\footnote{For details, we refer to the Supplemental Material}:
 \begin{equation}
@@ -197,13 +198,13 @@ This can be achieved by casting $H$ into the form~\footnote{For details, we refe
     \label{eq:covariant_hamiltonian}
 \end{equation}
 where $h\colon T^r \to \mathrm{Mat}_{2\times2} (\mathbb{C}^2)$,
-%Intuitively, 
 the sum over $\vec{j}$ visits all lattice sites, and the sum over $\vec{i}$ all neighbors.
 \revise{
-A similar reformulation of the Hamiltonian is also known from the Hofstadter model $H_\mathrm{HF} = t \sum_{\braket{\vec{i},\vec{j}} \in \mathbb{Z}^{2} \times \mathbb{Z}^2}e^{i a_{\vec{i} \vec{j}}} c_\vec{k}^\dagger c_\vec{l} $ describing electrons in a uniform magnetic field in two dimensions~\cite{Hofstadter1976}, where $a_{\vec{k} \vec{l}}$ is the integral of the magnetic vector potential from site $\vec{x}_\vec{l}$ to site $\vec{x}_k$.
-This Hamiltonian can be written as $H_\mathrm{HF} = \hat{S}_1 +  \hat{S}_2 + \mathrm{h.c.} $ in terms of the magnetic translation operators $\hat{S}_i = e^{i a_{i+1,i}} \hat{T}_i$~\cite{Zak1964}, where $\hat{T}_i$ to represents a unit lattice translation in direction $i$.
-These operators obey the commutation relation $\hat{S}_1 \hat{S}_2 = e^{2\pi i n_\Phi} \hat{S}_2 \hat{S}_1$, where $n_\Phi$ is the number of magnetic flux quanta per unit cell.
+A similar reformulation is known from the Hofstadter model $H_\mathrm{HF} = t \sum_{\braket{\vec{i},\vec{j}} \in \mathbb{Z}^{2} \times \mathbb{Z}^2}e^{i a_{\vec{i} \vec{j}}} c_\vec{i}^\dagger c_\vec{j} $ describing electrons in a uniform magnetic field~\cite{Hofstadter1976}, where $a_{\vec{i} \vec{j}}$ is the integral of the magnetic vector potential from site $\vec{x}_\vec{i}$ to site $\vec{x}_\vec{j}$.
+One can rewrite $H_\mathrm{HF} = \hat{S}_1 +  \hat{S}_2 + \mathrm{h.c.} $ in terms of the magnetic translation operators $\hat{S}_i = e^{i a_{i+1,i}} \hat{T}_i$~\cite{Zak1964}, where $\hat{T}_i$ to represents a unit lattice translation in direction $i$.
+These operators obey $\hat{S}_1 \hat{S}_2 = e^{2\pi i n_\Phi} \hat{S}_2 \hat{S}_1$, where $n_\Phi$ is the number of magnetic flux quanta per unit cell.
 The knowledge of this algebraic structure completely characterizes the topological properties of the associated Hofstadter spectrum~\cite{Hofstadter1976, Bellissard1994, Prodan2016}.
+It is known that in the limit of smooth textures and strong coupling, the more general Hamiltonian of Eq.~(\ref{eq:covariant_hamiltonian}) can be effectively mapped onto the Hofstadter Hamiltionian \cite{Hamamoto2015,Su2020}.
 }
 
 Eq.~(\ref{eq:covariant_hamiltonian}) now demonstrates, that the observable algebra of the aperiodic spin system is completely determined \revise{(or generated)} by the lattice translation operators and the space of continuous, matrix-valued functions on the torus.
@@ -227,93 +228,33 @@ The observables of the system can therefore be characterized by the universal $C
 \end{align}
 This algebra is known as the \emph{noncommutative torus} in $r+d$ dimensions~\cite{Rieffel1981, Connes1994, Prodan2019}.
 \revise{It can be interpreted as a generalization of the algebra describing the Hofstadter model, where $\Theta_{lk}$ now describes generalized magnetic fluxes in the higher-dimensional space with $r$ artificial extra dimensions associated to the $\vec{q}$-vectors~\cite{Kraus2013, Ma2021}}.
-%The full observable algebra including spin  is then characterized by the tensor product $\mathcal{A} = \mathcal{A}_\sigma \otimes \mathcal{A}_\theta$, where $\mathcal{A}_\sigma$ is the algebra of hermitian $2\times2$ matrices.
 
 \revise{
-Noncommutative K-theory classifies the projection operators which can arise from this observable algebra~\cite{Park2008,Blackadar1998, Connes1994}.
+K-theory classifies the projection operators which can arise from this observable algebra~\cite{Park2008,Blackadar1998, Connes1994}.
 Loosely speaking, two projections operators $P$ and $P'$ belong to the same equivalence class $[P]$ if they are related by a unitary transformation $P' = U P U^\dagger $. 
 The set of all $[P]$ defines the so-called $K_0$ group of the algebra $\mathcal{A}_\Theta$.
 %Equivalently, one could say that $P$ and $P'$ are equivalent if there exists a continuous path between them.
 For the case of $\mathcal{A}_\Theta$, the K-theoretical properties are well-understood~\cite{Prodan2016}.
-In particular, one has $K_0( \mathcal{A}_\Theta) = \mathbb{Z}^{2^{r+d-1}}$, which is a compact way of saying that any class of topologically equivalent projection operators $[P]$ can be written as a linear combination of generators $[P] =\sum_J n_J [E_J]$, conveniently labelled by even cardinality subsets $J$ of $\mathcal{I}=\lbrace \tau_1 \cdots, \tau_d, u_1  \cdots, u_r \rbrace$~\SupplementalMaterial.
+In particular, one has $K_0( \mathcal{A}_\Theta) = \mathbb{Z}^{2^{r+d-1}}$, which is a compact way of saying that any class of topologically equivalent projection operators $[P]$ can be written as a linear combination of generators $[P] =\sum_J n_J [E_J]$, conveniently labelled by even cardinality subsets $J$ of $\mathcal{I}=\lbrace \tau_1 \cdots, \tau_d, u_1  \cdots, u_r \rbrace$~\SupplementalMaterial, and where $n_J \in \ZM$.
 }
 
 \revise{
-For the case when a periodic supercell can be chosen, it is known that the higher-order Chern numbers carry the essential topological information about the physical system~\cite{Qi2008,Kraus2013}.
-This concept can be generalized via noncommutative geometry~\cite{Liu2020, Prodan2016}.
-If $|J| = 2 m $, ${\rm Ch}_{J} (g) \in \mathbb{N}$ describes a noncommutative $m$-th Chern number, where  ${\rm Ch}_{\emptyset} (g)$ is just the integrated density of states (IDS).
-In the lattice periodic case, ${\rm Ch}_{{\tau_1, \tau_2}} (g)$ is nothing but the integral of the momentum space Berry curvature $\Omega_{k_1 k_2}$, while ${\rm Ch}_{{\tau_1, u_1}} (g)$ would translate into an integral over a mixed-space Berry curvature $\Omega_{k_1 \omega_1}$.
-Since we have found that the underlying observable algebra $\mathcal{A}_\Theta$ is the noncommutative torus, the Chern numbers have to fulfill~\cite{Prodan2016},
+For $|J| = 2m$, let ${\rm Ch}_{J} (g)$ describe the noncommutative $m$-th Chern numbers of the spectral gap $g$~\cite{Prodan2013b, Liu2022}.
+Since we have found that the underlying observable algebra is the noncommutative torus, these numbers have to fulfill~\cite{Prodan2016}
 \begin{equation}
    {\rm Ch}_{J'} (g) =  \sum_{J \subseteq \mathcal{I} }^{|J|~\mathrm{even}}  n_J(g) \, {\rm Ch}_{J'}(E_J),
    \label{eq:chern_expansion}
 \end{equation}
-where ${\rm Ch}_{J'}(E_J)=1$ if $J=J'$,  ${\rm Ch}_{J'}(E_J)=0$ if $J \not\subseteq J'$ and ${\rm Ch}_{J'}(E_J) = \mathrm{Pf}( \Theta_{J\setminus J'})$ otherwise.
-This means we can use the IDS to map out some possible Chern numbers which can be realized from the Hamiltonian in Eq.~(\ref{eq:hamiltonian}).
+where ${\rm Ch}_{J'}(E_J)=1$ if $J=J'$,  ${\rm Ch}_{J'}(E_J)=0$ if $J \not\subseteq J'$ and ${\rm Ch}_{J'}(E_J) = \mathrm{Pf}( \Theta_{J\setminus J'})$ otherwise
+\footnote{The operation $\mathrm{Pf}$ denotes the Pfaffian and $\Theta_{J\setminus J'}$ denotes the representation of $\Theta$ in the reduced index set $J\setminus J'$.}.
+For the case when a periodic supercell can be chosen and the magnetic texture is smooth, the higher-order Chern numbers can be obtained through integrals over Berry curvature expressions~\cite{Qi2008, Kraus2013, Su2020}.
+In~\SupplementalMaterial, we show how this result is contained in our more general framework.
 }
 
-% \revise{
-% More consequences follow from the fact that $\mathcal{A}_\Theta$ is the noncommutative torus.
-% We define the higher-order Chern numbers of the gap $g$ for $J' \subset J$:~\cite{TheNoncommutativeNthChern}
-% \begin{equation}
-%     {\rm Ch}_{J'}(g) = \frac{(2\pi i)^{|J'|/2}}{( |J'|/2 )!} \sum_{\sigma \in \Ss_{|J'|}} (-1)^\sigma \Tt\Big ( P \prod_{j \in J'} \partial_{\sigma_j}P \Big ),
-% \end{equation}
-% where $\Tt = \lim_{N\to\infty} N^{-1} \tr~$ is the trace per unit volume and $P$ projects to the occupied subspace of gap $g$.
-% Technically, the objects $\partial_{\tau_i}$ and $\partial_{u_j}$ represent derivations on $\mathcal{A}_\theta$ which translate into crystal momentum derivates $\partial_{\tau_i} \to \partial_{k_i}$ and phase derivatives $\partial_{u_j} \to  \partial_{\omega_j}$ when a commensurate supercell can be chosen~\SupplementalMaterial.
-% Since we are dealing with $\mathcal{A}_\Theta$, the Chern numbers as defined before have to fulfill~\cite{Prodan2016a},
-% \begin{equation}
-%    {\rm Ch}_{J'} (g) =  \sum_{J \subseteq \mathcal{I} }^{|J|~\mathrm{even}}  n_J(g) \, {\rm Ch}_{J'}(E_J),
-%    \label{eq:chern_expansion}
-% \end{equation}
-% where ${\rm Ch}_{J'}(E_J)=1$ if $J=J'$,  ${\rm Ch}_{J'}(E_J)=0$ if $J \not\subseteq J'$ and ${\rm Ch}_{J'}(E_J) = \mathrm{Pf}( \Theta_{J\setminus J'})$ otherwise.
-% Since ${\rm Ch}_{\emptyset} (g)$ is just the integrated density of states (IDS), we can use it to map out some of the possible Chern numbers which can be realized from the Hamiltonian in Eq.~(\ref{eq:hamiltonian}).
-% }
-% {\color{blue}
-% Noncommutative K-theory classifies the projection operators which can arise from this observable algebra.
-% In particular, the $K_0$ group is given by $K_0(\mathcal{A}) = \mathbb{Z}^{2^{r+d-1}}$, which 
-% is a compact way of saying that any class of topologically equivalent projection operators $[P]$ can be written as a linear combination of generators $[P] =\sum_J n_J [E_J]$, conveniently labelled by even cardinality subsets $J$ of $\mathcal{I}=\lbrace \tau_1 \cdots, \tau_d, u_1  \cdots, u_r \rbrace$~\SupplementalMaterial.
-% The coefficients $n_J$ are necessarily integers, and constitute the full topological characterization of $[P]$~\cite{Prodan2016a}.
-% %The coefficients $n_J$ are necessarily integers, which is closely related to the integrality of the Chern numbers \cite{Prodan2016a}
-% More familar from the physicists point of view is the notion of the Chern number, here defined as (how to explain this without the notation overhead?)
-% \begin{equation}
-%     {\rm Ch}_J(P) = \Lambda_J \sum_{\sigma \in \Ss_{|J|}} (-1)^\sigma \Tt\Big ( P \prod_{j \in J} \partial_{\sigma_j}P \Big ),
-% \end{equation}
-% where $\Tt = \lim_{N\to\infty} N^{-1} \tr~$ is the trace per unit volume and $\Lambda_J=?$.
-% For lattice periodic insulators, ${\rm Ch}_{ \lbrace \tau_1, \tau_2 \rbrace } (P)$ is then nothing but the integrated momentum-space Berry curvature. 
-% \begin{equation}
-%     {\rm Ch}_{\emptyset} (g) =  \sum_{J \subseteq \mathcal{I} }^{|J|~\mathrm{even}}  n_J(g)~\mathrm{Pf}~\Theta_J,
-%     \label{eq:chern_expansion}
-%  \end{equation}
-% }
- 
-% \revise{Referees find this paragraph too difficult $\rightarrow$ move technical definitions to appendix, rephrase content in more intuitive language}
-% Noncommutative K-theory classifies the projection operators which can arise from this observable algebra.
-% In particular, the $K_0$ group is given by $K_0(\mathcal{A}) = \mathbb{Z}^{2^{r+d-1}}$, which means that any class of topologically equivalent projection operators $[P]$ can be written as a linear combination of generators $[P] =\sum_J n_J [E_J]$, conveniently labelled by even cardinality subsets $J$ of $\mathcal{I}=\lbrace \tau_1 \cdots, \tau_d, u_1  \cdots, u_r \rbrace$.
-% The coefficients $n_J$ are necessarily integers, and constitute the full topological characterization of $[P]$~\cite{Prodan2016a}.
-% For a gap projection $g$ on the noncommutative torus, 
-% this characterization can be achieved by a computation of the Chern numbers
-% $ {\rm Ch}_{J'}$ labelled by $J' \subseteq \mathcal{I}
-% $~\cite{Prodan2016a}, i.e.,
-% \begin{equation}
-%    {\rm Ch}_{J'} (g) =  \sum_{J \subseteq \mathcal{I} }^{|J|~\mathrm{even}}  n_J(g) \, {\rm Ch}_{J'}(E_J),
-%    \label{eq:chern_expansion}
-% \end{equation}
-% where ${\rm Ch}_{J'}(E_J)=1$ if $J=J'$,  ${\rm Ch}_{J'}(E_J)=0$ if $J \not\subseteq J'$ and ${\rm Ch}_{J'}(E_J) = \mathrm{Pf}( \Theta_{J\setminus J'})$ otherwise.
-% The operation $\mathrm{Pf}$ denotes the Pfaffian and $\Theta_{J\setminus J'}$ denotes the representation of $\Theta$ in the reduced index set $J\setminus J'$.
-% We focus on the zeroth Chern number $ {\rm Ch}_{\emptyset}$, which is nothing but the integrated density of states (IDS)~\cite{Apigo2018}:
-% \begin{equation}
-%     {\rm Ch}_{\emptyset}(g) = \mathrm{IDS}(g) = \lim\limits_{N\to\infty}  \frac{1}{N} \tr~P_{E<E_g},
-%     \label{eq:ids_sum}
-% \end{equation}
-% where $N$ is the number of lattice sites, $E_g$ is an energy in the gap $g$ and $P_{E<E_g}$ is the projector onto the states below $E_g$.
-% In the following, we use the IDS, to map out the possible Chern numbers which can be realized from the Hamiltonian in Eq.~(\ref{eq:hamiltonian}).
-% As suggested by Eq.~(\ref{eq:chern_expansion}), multi-$\vec{q}$ magnetism can generate a finite $\Theta$-matrix, and thereby faciliate the emergence of topologically nontrivial electronic states. 
-
-%The IDS therefore encodes topological properties of the spectrum and Eq.~(\ref{eq:chern_expansion}) demonstrates that multi-$\vec{q}$ magnetism can drive distinct topological features in the spectrum, since it generates a finite $\Theta$ matrix.
 
 \begin{figure*}[t]
  \centering
- \includegraphics[width=0.85\linewidth]{../gfx/figure_02/figure_02.png}
+ \includegraphics[width=0.86\linewidth]{../gfx/figure_02/figure_02.png}
  \caption{
      Topological spectrum of 3-$\vec{q}$-states.
      Fig a) shows an example for skyrmionic 3-$\vec{q}$-states on the triangular lattice with $N=400$, $\theta_1 = 3/\sqrt{N}$ and periodic boundary conditions.
@@ -329,7 +270,7 @@ This means we can use the IDS to map out some possible Chern numbers which can b
 
 
 %-- limacons --------------------------------------
-
+The simplest example, ${\rm Ch}_{\emptyset} (g)$, represents the integrated density of states (IDS) and we can use it to map out some possible Chern numbers that are realized by the Hamiltonian in Eq.~(\ref{eq:hamiltonian})
 To illustrate this point, we start with investigating the following superposition of two helicoidal spin spirals ($r=2$):
 $\hatn( \boldsymbol{\omega}(x_k ) )
 =\sum_{i=1}^{2}( \cos ( 2 \pi \omega_i(x_k) )\vec{e}_y
@@ -384,7 +325,7 @@ According to the classification of Fig.~\ref{fig:three_q_states}c),
 these gaps correspond to a quantization of $n_{\tau^2u^2}$ with $n_{\tau u}=0$.
 Naively, this seems to indicate that the first Chern numbers are zero which would be in contradiction to the known quantized topological Hall effect in this system.
 However, the anomalous Hall effect picks up the different Chern number $\mathrm{Ch}_{ \lbrace \tau_1 \tau_2 \rbrace } = n_{ \lbrace \tau_1 \tau_2 \rbrace }$ \cite{Prodan2017} which is not visible in the IDS.
-In the adiabatic limit $m/t \to \infty$ and $\theta_1 \to 0$, it can be shown that $\mathrm{Ch}_{ \lbrace \tau_1 \tau_2 \rbrace } = n_{\tau^2u^2}$~\SupplementalMaterial, and the apparent contradiction is resolved.
+In the adiabatic limit $\xc/t \to \infty$ and $\theta_1 \to 0$, it can be shown that $\mathrm{Ch}_{ \lbrace \tau_1 \tau_2 \rbrace } = n_{\tau^2u^2}$~\SupplementalMaterial, and the apparent contradiction is resolved.
 Noteworthy, these results persist as $\theta_1$ approaches the scale of the underlying lattice, since the respective gaps can be continuously connected to the limit of $\theta_1 \to 0$.
 Here (and in particular for gaps which are not connected to the adiabatic limit), any arguments based on the smoothness of the texture fail, while the K-theory description can still be upheld.
 
