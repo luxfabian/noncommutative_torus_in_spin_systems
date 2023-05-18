@@ -44,7 +44,7 @@
 
 \newcommand{\SupplementalMaterial}{\cite{Note1}}
 
-\newcommand{\revise}[1]{{\color{blue}#1}}
+\newcommand{\revise}[1]{{#1}}
 
 
 %====================================================
@@ -277,7 +277,7 @@ $\hatn( \boldsymbol{\omega}(x_k ) )
 +\sin ( 2 \pi \omega_i(x_k) )\vec{e}_z)
 $,
 defined on a 1D lattice ($d=1$) implying $\omega_i(x_k) = k \theta_i + \varphi_i$. 
-This system could be realized physically via the proximity coupling of a 1D electronic system to two independent atomic spin spirals, each stabilizing a spin helix \footnote{Another way to think about is as a noncollinear spin density wave.}.
+This system could be realized physically via the proximity coupling of a 1D electronic system to two independent atomic spin spirals, each stabilizing a spin helix \footnote{One could also view it as a noncollinear spin density wave.}.
 We consider the special case of $\theta_2 = 2 \theta_1$, i.e., $\theta_1$ and $\theta_2$ are rationally dependent \footnote{Other relations between $\theta_1$ and $\theta_2$ could be considered, but will not change the qualitative results, except for $\theta_1=\theta_2$, where the spectrum is trivial.}.
 For this situation, the orbit of the lattice translation group generates a dense, 1D subspace on the 2-torus:  $\Omega \cong T^1 \subset T^2$ which is the hull (see Fig. \ref{fig:limacon}).
 For the numerical analysis, we consider a finite system of $N=1024$ atoms with periodic boundary conditions. 
@@ -351,13 +351,13 @@ Particular exciting aspects to address in the future are the topology of three-d
 We  acknowledge  funding  under SPP 2137 ``Skyrmionics'' (project  MO  1731/7-1)  of  Deutsche  Forschungsgemeinschaft (DFG) and also gratefully thank the J\"ulich Supercomputing Center and RWTH Aachen University for providing computational resources under project jiff40. 
 This work was further supported by the Max Planck Graduate Center with the Johannes Gutenberg-Universit\"at Mainz (MPGC).
 Emil Prodan acknowledges financial support from the W.M. Keck Foundation and USA National Science Foundation through grant  DMR-1823800.
-
+The open source code used to generate the results of this work is available from \footnote{\url{https://github.com/luxfabian/noncommutative_torus_in_spin_systems}}.
 
 %-- literature ------------------------------------
 
 \hbadness=99999 
 \bibliographystyle{apsrev4-2}
-\bibliography{literature}
+\bibliography{literature}   
 
 \end{document}
 
