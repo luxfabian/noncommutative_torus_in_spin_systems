@@ -1,7 +1,7 @@
 \documentclass[
     10pt,
     aps,
-    prl,
+    prr,
     twocolumn,
     floatfix,
     superscriptaddress
@@ -44,7 +44,7 @@
 
 \newcommand{\SupplementalMaterial}{\cite{Note1}}
 
-\newcommand{\revise}[1]{{#1}}
+\newcommand{\revise}[1]{{\color{red} #1}}
 
 
 %====================================================
@@ -98,7 +98,7 @@ This opens a way towards an educated design of topological phases in aperiodic, 
 
 %-- introduction ------------------------------------
 
-Noncollinear magnetism is central to many ideas in the field of spintronics and future information technology~\cite{Vedmedenko2020, Back2020}.
+\revise{{\it Introduction}}. Noncollinear magnetism is central to many ideas in the field of spintronics and future information technology~\cite{Vedmedenko2020, Back2020}.
 Recently, a diverse class of so-called multi-$\vec{q}$ magnets $-$ characterized by a phase-coherent superposition of multiple spin-spirals $-$ has received particular attention~\cite{Okubo2012, Takagi2018, Hirschberger2019, Fujishiro2019, Okumura2020}.
 Experimentally established examples include one-dimensional (1D) helicoids in chiral magnets~\cite{Adams2012,Janoschek2013}, the two-dimensional skyrmion crystal of \ce{MnSi}~\cite{Neubauer2009} and the three-dimensional hedgehog lattice (HL) in \ce{MnGe}~\cite{Tanigaki2015}.
 The interest in multi-$\vec{q}$ states is fueled by their connection to emergent electromagnetic fields which leads the way to rich electronic physics~\cite{ Bliokh2005, Fujita2011}
@@ -121,7 +121,7 @@ We believe that our results point a way towards a controlled design of topologic
 
 %-- formalism ---------------------------------------
 
-We consider a class of Hamiltonians which assume the form of the following nearest-neighbor tight-binding model on a $d$-dimensional Bravais lattice, given by
+\revise{{\it Model Hamiltonian.}} We consider a class of Hamiltonians which assume the form of the following nearest-neighbor tight-binding model on a $d$-dimensional Bravais lattice, given by
 \begin{align}
     H  = t \sum_{\braket{\vec{i},\vec{j}} \in \mathbb{Z}^{2d}} \ket{\vec{i}}\bra{\vec{j}}
     + \xc\sum_{\vec{i} \in \mathbb{Z}^d}  (\hatn (\vec{x}_\vec{i}) \cdot \bsigma) ~ \ket{\vec{i}}\bra{\vec{i}} ,
@@ -154,7 +154,7 @@ The loss of translational symmetry renders the situation hopeless, as the space 
   \label{fig:limacon}
   \end{figure*}
 
-There is an important subclass of realistic magnetic textures whose spectra are completely characterized by the topological properties of their observable algebras.
+\revise{{\it Multi-$\vec{q}$ magnetism}}. There is an important subclass of realistic magnetic textures whose spectra are completely characterized by the topological properties of their observable algebras.
 Namely, it is not uncommon that such a magnetic texture is described by one or more phase factors through which the real-space dependence will enter the Hamiltonian. 
 These are generally known as multi-$\vec{q}$ states and encompass 1D textures such as spin-spirals, but also magnetic skyrmion lattices such as the famous $A$ phase of \ce{MnSi}~\cite{Neubauer2009}.
 Each multi-$\vec{q}$ texture is characterized by
@@ -188,7 +188,7 @@ If at least one $\theta_{ij}$ is irrational, $\Omega$ forms a dense subset of $T
 
 %-- observable algebra ----------------------------
 
-Taking this into account, the Hamiltonian $H$ from Eq.~(\ref{eq:hamiltonian}) can now be rewritten in a way that makes the observable algebra apparent.
+\revise{{\it The observable algebra}}. Taking this into account, the Hamiltonian $H$ from Eq.~(\ref{eq:hamiltonian}) can now be rewritten in a way that makes the observable algebra apparent.
 The basic idea is to distill the generators of the algebra by formulating $H$ in terms of these.
 This can be achieved by casting $H$ into the form~\footnote{For details, we refer to the Supplemental Material}:
 \begin{equation}
@@ -197,20 +197,19 @@ This can be achieved by casting $H$ into the form~\footnote{For details, we refe
 \end{equation}
 where $h\colon T^r \to \mathrm{Mat}_{2\times2} (\mathbb{C}^2)$,
 the sum over $\vec{j}$ visits all lattice sites, and the sum over $\vec{i}$ all neighbors.
-\revise{
 A similar reformulation is known from the Hofstadter model $H_\mathrm{HF} = t \sum_{\braket{\vec{i},\vec{j}} \in \mathbb{Z}^{2} \times \mathbb{Z}^2}e^{i a_{\vec{i} \vec{j}}} c_\vec{i}^\dagger c_\vec{j} $ describing electrons in a uniform magnetic field~\cite{Hofstadter1976}, where $a_{\vec{i} \vec{j}}$ is the integral of the magnetic vector potential from site $\vec{x}_\vec{i}$ to site $\vec{x}_\vec{j}$.
 One can rewrite $H_\mathrm{HF} = \hat{S}_1 +  \hat{S}_2 + \mathrm{h.c.} $ in terms of the magnetic translation operators $\hat{S}_i = e^{i a_{i+1,i}} \hat{T}_i$~\cite{Zak1964}, where $\hat{T}_i$ to represents a unit lattice translation in direction $i$.
 These operators obey $\hat{S}_1 \hat{S}_2 = e^{2\pi i n_\Phi} \hat{S}_2 \hat{S}_1$, where $n_\Phi$ is the number of magnetic flux quanta per unit cell.
 The knowledge of this algebraic structure completely characterizes the topological properties of the associated Hofstadter spectrum~\cite{Hofstadter1976, Bellissard1994, Prodan2016}.
 It is known that in the limit of smooth textures and strong coupling, the more general Hamiltonian of Eq.~(\ref{eq:covariant_hamiltonian}) can be effectively mapped onto the Hofstadter Hamiltionian \cite{Hamamoto2015,Su2020}.
-}
 
-Eq.~(\ref{eq:covariant_hamiltonian}) demonstrates, that the observable algebra of the aperiodic spin system is completely determined \revise{(or generated)} by the lattice translation operators and the space of continuous, matrix-valued functions on the torus.
-\revise{In other words, any observable can be written in the same generic form as Eq.~(\ref{eq:covariant_hamiltonian}).
+
+Eq.~(\ref{eq:covariant_hamiltonian}) demonstrates, that the observable algebra of the aperiodic spin system is completely determined (or generated) by the lattice translation operators and the space of continuous, matrix-valued functions on the torus.
+In other words, any observable can be written in the same generic form as Eq.~(\ref{eq:covariant_hamiltonian}).
 We can narrow down on the minimal set of generators: 
 by Fourier decomposition, scalar complex functions on the torus $T^r$ are generated by the complex phase factors $u_k = e^{ 2 \pi i \phi_k}$, where $\boldsymbol{\phi} \in T^r $.
 Consider $\tau_i$ to be a unit lattice translation in direction $i$. 
-Following the previous definition of the translation operator, we have $ \tau_l \phi_k = \phi_k - \theta_{kl}$  and find}
+Following the previous definition of the translation operator, we have $ \tau_l \phi_k = \phi_k - \theta_{kl}$  and find
 the commutation relations $ [\tau_i, \tau_j] = 0 $, $ [u_i, u_j]  = 0$ and $\tau_l u_k = e^{-2 \pi i \theta_{kl}} u_k  \tau_l$~\SupplementalMaterial.
 By defining $\boldsymbol{\alpha}=(\tau_1, \ldots, \tau_d, u_1,\ldots u_r )$, these relations can be summarized to $\alpha_l \alpha_k = e^{2 \pi i \Theta_{lk}} \alpha_k  \alpha_l$, where
 \begin{equation}
@@ -219,25 +218,27 @@ By defining $\boldsymbol{\alpha}=(\tau_1, \ldots, \tau_d, u_1,\ldots u_r )$, the
     \theta & 0
     \end{pmatrix} .
 \end{equation}
-The observables of the system can therefore be characterized by the universal $C^\ast$-algebra given by the presentation~\footnote{\revise{The equation uses a common shorthand notation whereby the elements before the $|$-sign are the abstract generators of the algebra and the terms following the $|$-sign are relations these generators have to fulfill.}}
+The observables of the system can therefore be characterized by the universal $C^\ast$-algebra given by the presentation~\footnote{The equation uses a common shorthand notation whereby the elements before the $|$-sign are the abstract generators of the algebra and the terms following the $|$-sign are relations these generators have to fulfill.}
 \begin{align}
     \mathcal{A}_\Theta &= \Braket{ \alpha_1, \cdots, \alpha_{r+d}
     |  \alpha_l \alpha_k = e^{ 2 \pi i \Theta_{lk}} \alpha_k  \alpha_l }.
 \end{align}
 This algebra is known as the \emph{noncommutative torus} in $r+d$ dimensions~\cite{Rieffel1981, Connes1994, Prodan2019}.
-\revise{It can be interpreted as a generalization of the algebra describing the Hofstadter model, where $\Theta_{lk}$ describes generalized magnetic fluxes in the higher-dimensional space with $r$ artificial extra dimensions associated to the $\vec{q}$-vectors~\cite{Kraus2013, Ma2021}}.
+It can be interpreted as a generalization of the algebra describing the Hofstadter model, where $\Theta_{lk}$ describes generalized magnetic fluxes in the higher-dimensional space with $r$ artificial extra dimensions associated to the $\vec{q}$-vectors~\cite{Kraus2013, Ma2021}.
 
-\revise{
+\revise{{\it Topological classification}}.
 $K$-theory classifies projection operators which can arise from this observable algebra~\cite{Park2008,Blackadar1998, Connes1994}.
 Loosely speaking, two projections operators $P$ and $P'$ belong to the same equivalence class $[P]$ if they are related by a unitary transformation $P' = U P U^\dagger $. 
 The set of all $[P]$ defines the so-called $K_0$ group of the algebra $\mathcal{A}_\Theta$.
 %Equivalently, one could say that $P$ and $P'$ are equivalent if there exists a continuous path between them.
 For the case of $\mathcal{A}_\Theta$, the K-theoretical properties are well-understood~\cite{Prodan2016}.
-In particular, one has $K_0( \mathcal{A}_\Theta) = \mathbb{Z}^{2^{r+d-1}}$, which is a compact way of saying that any class of topologically equivalent projection operators $[P]$ can be written as a linear combination of generators $[P] =\sum_J n_J [E_J]$, conveniently labelled by even cardinality subsets $J$ of $\mathcal{I}=\lbrace \tau_1 \cdots, \tau_d, u_1  \cdots, u_r \rbrace$~\SupplementalMaterial, and where $n_J \in \ZM$.
-}
+In particular, one has $K_0( \mathcal{A}_\Theta) = \mathbb{Z}^{2^{r+d-1}}$, which is a compact way of saying that any class of topologically equivalent projection operators $[P]$ can be written as a linear combination of generators $[P] =\sum_J  n_J [E_J] $, \revise{labelled by even-cardinality subsets $J$ of $\mathcal{I}=\lbrace \tau_1 \cdots, \tau_d, u_1  \cdots, u_r \rbrace$ (there are precisely $2^{r+d-1}$ such subsets), and where $n_J \in \ZM$.  \revise{
+While the projections $E_J$ could be computed in principle \cite{Rieffel1981}, the explicit knowledge of these is not necessary to compute all $n_J$.}
 
-\revise{
-For $|J| = 2m$, let ${\rm Ch}_{J} (g)$ describe the noncommutative $m$-th Chern numbers of the spectral gap $g$~\cite{Prodan2013b, Liu2022}.
+\revise{This can be achieved through the noncommutative $m$-th Chern numbers ~\cite{Prodan2013b, Liu2022}} 
+
+Let $P$ be such a projection, with decomposition into $E$}
+For $|J| = 2m$, let ${\rm Ch}_{J} (g)$ describe the noncommutative $m$-th Chern numbers of the spectral gap $g$~\cite{Prodan2013b, Liu2022} with spectral projection $P$.
 Since we have found that the underlying observable algebra is the noncommutative torus, these numbers have to fulfill~\cite{Prodan2016}
 \begin{equation}
    {\rm Ch}_{J'} (g) =  \sum_{J \subseteq \mathcal{I} }^{|J|~\mathrm{even}}  n_J(g) \, {\rm Ch}_{J'}(E_J),
@@ -247,7 +248,7 @@ where ${\rm Ch}_{J'}(E_J)=1$ if $J=J'$,  ${\rm Ch}_{J'}(E_J)=0$ if $J \not\subse
 \footnote{The operation $\mathrm{Pf}$ denotes the Pfaffian and $\Theta_{J\setminus J'}$ denotes the representation of $\Theta$ in the reduced index set $J\setminus J'$.}.
 For the case when a periodic supercell can be chosen and the magnetic texture is smooth, the higher-order Chern numbers can be obtained through integrals over Berry curvature expressions~\cite{Qi2008, Kraus2013, Su2020}.
 In~\SupplementalMaterial, we show how this result is contained in our more general framework.
-}
+
 
 
 \begin{figure*}[t]
@@ -268,7 +269,7 @@ In~\SupplementalMaterial, we show how this result is contained in our more gener
 
 
 %-- limacons --------------------------------------
-The simplest example, ${\rm Ch}_{\emptyset} (g)$, represents the integrated density of states (IDS) and we can use it to map out some possible Chern numbers that are realized by the Hamiltonian in Eq.~(\ref{eq:hamiltonian})
+\revise{{\it Superposition of spin spirals}}. The simplest example, ${\rm Ch}_{\emptyset} (g)$, represents the integrated density of states (IDS) and we can use it to map out some possible Chern numbers that are realized by the Hamiltonian in Eq.~(\ref{eq:hamiltonian})
 To illustrate this point, we start with investigating the following superposition of two helicoidal spin spirals ($r=2$):
 $\hatn( \boldsymbol{\omega}(x_k ) )
 =\sum_{i=1}^{2}( \cos ( 2 \pi \omega_i(x_k) )\vec{e}_y
@@ -300,6 +301,7 @@ Since the gaps with $n_{\tau u} \neq 0$ are characterized by the first Chern num
 
 %-- skyrmions and vortices ---------------------------------
 
+\revise{{\it Skyrmion lattice}.}
 One way to interpret the $\Theta$-matrix is to think of it as a generalized magnetic flux.
 This is similar to the emergent field of smooth magnetic skyrmions~\cite{Bliokh2005, Schulz2012}, but is a far-reaching generalization of this concept, which also makes sense for discrete systems.
 To investigate the transition into the conventional emergent field picture, we consider a triangular lattice with $\vec{a}_1 = a (1,0)^T$, $\vec{a}_2 = a (1/2,\sqrt{3}/2 )^T$ and reciprocal lattice vectors
@@ -327,6 +329,7 @@ In the adiabatic limit $\xc/t \to \infty$ and $\theta_1 \to 0$, it can be shown 
 Noteworthy, these results persist as $\theta_1$ approaches the scale of the underlying lattice, since the respective gaps can be continuously connected to the limit of $\theta_1 \to 0$.
 Here (and in particular for gaps which are not connected to the adiabatic limit), any arguments based on the smoothness of the texture fail, while the $K$-theory description can still be upheld.
 
+\revise{{\it Vortex lattice}.}
 To further underline this point, we perform the same calculation after replacing the superposition of spin spirals by a superposition of spin density waves which gives rise to the spin texture in Fig.~\ref{fig:three_q_states}d)~\SupplementalMaterial. 
 It is not obvious what the emergent field language would predict, and  
 in fact, the emergent magnetic field in the continuous limit  $B_\mathrm{em} = \hatn \cdot(\partial_x \hatn \times \partial_y \hatn)$ is zero for this texture.
@@ -337,6 +340,7 @@ This serves to show that the generalized fluxes $\Theta$ can provide a connectin
 
 %-- Conclusion ------------------------------
 
+\revise{{\it Conclusion}}.
 In summary, we put forward a new method to characterize electronic topological states emerging in real-space spin textures based on the $K$-theory of $C^\ast$-algebras.
 In contrast to conventional methods of topological characterization based on smooth Berry phase properties $-$ whose meaning is lost in aperiodic, disordered or non-smooth textures $-$ the $K$-theory analysis can be used to predict and understand the appearance of nontrivial gaps beyond this limitation. 
 As such, the $K$-theory categorization bears great promise for unraveling and shaping the hybrid topological properties of complex spin textures in real materials.
@@ -344,18 +348,17 @@ Particular exciting aspects to address in the future are the topology of three-d
 
 
 %-- acknowledgements ------------------------------
-\begin{acknowledgments}
+\revise{{\it Acknowledgments}}. 
 We  acknowledge  funding  under SPP 2137 ``Skyrmionics'' (project  MO  1731/7-1)  of  Deutsche  Forschungsgemeinschaft (DFG) and also gratefully thank the J\"ulich Supercomputing Center and RWTH Aachen University for providing computational resources under project jiff40. 
 This work was further supported by the Max Planck Graduate Center with the Johannes Gutenberg-Universit\"at Mainz (MPGC).
 Emil Prodan acknowledges financial support from the W.M. Keck Foundation and USA National Science Foundation through grant  DMR-1823800.
 The open source code used to generate the results of this work is available from \footnote{\url{https://github.com/luxfabian/noncommutative_torus_in_spin_systems}}.
-\end{acknowledgments}
+
 %-- literature ------------------------------------
 
 \hbadness=99999 
 \bibliographystyle{apsrev4-2}
 \bibliography{literature}  
-
 
 \end{document}
 
