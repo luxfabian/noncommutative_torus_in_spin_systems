@@ -235,10 +235,12 @@ For the case of $\mathcal{A}_\Theta$, the K-theoretical properties are well-unde
 In particular, one has $K_0( \mathcal{A}_\Theta) = \mathbb{Z}^{2^{r+d-1}}$, which is a compact way of saying that any class of topologically equivalent projection operators $[P]$ can be written as a linear combination of generators $[P] =\sum_J  n_J [E_J] $, \revise{labelled by even-cardinality subsets $J$ of $\mathcal{I}=\lbrace \tau_1 \cdots, \tau_d, u_1  \cdots, u_r \rbrace$ (there are precisely $2^{r+d-1}$ such subsets), and where $n_J \in \ZM$.  \revise{
 While the projections $E_J$ could be computed in principle \cite{Rieffel1981}, the explicit knowledge of these is not necessary to compute all $n_J$.}
 
-\revise{This can be achieved through the noncommutative $m$-th Chern numbers ~\cite{Prodan2013b, Liu2022}} 
-
-Let $P$ be such a projection, with decomposition into $E$}
-For $|J| = 2m$, let ${\rm Ch}_{J} (g)$ describe the noncommutative $m$-th Chern numbers of the spectral gap $g$~\cite{Prodan2013b, Liu2022} with spectral projection $P$.
+This can be done via the noncommutative $m$-th Chern numbers ~\cite{Prodan2013b, Liu2022}
+\begin{equation}
+    {\rm Ch}_{J'}(g) = \frac{(2\pi i)^{|J'|/2}}{( |J'|/2 )!} \sum_{\sigma \in \Ss_{|J'|}} (-1)^\sigma \Tt\Big ( P \prod_{j \in J'} \partial_{\sigma_j}P \Big ) ,
+    \label{eq:chern_formula}
+\end{equation}
+where for $J = \emptyset$, we define ${\rm Ch}_\emptyset(P) = \Tt(P)$. Here, $P$ is the spectral projection associated with gap $g$, and $\Tt$ is the trace per unit volume and $\Ss_{|J'|}$ is the symmetric group of order $|J|$. }
 Since we have found that the underlying observable algebra is the noncommutative torus, these numbers have to fulfill~\cite{Prodan2016}
 \begin{equation}
    {\rm Ch}_{J'} (g) =  \sum_{J \subseteq \mathcal{I} }^{|J|~\mathrm{even}}  n_J(g) \, {\rm Ch}_{J'}(E_J),
@@ -246,8 +248,8 @@ Since we have found that the underlying observable algebra is the noncommutative
 \end{equation}
 where ${\rm Ch}_{J'}(E_J)=1$ if $J=J'$,  ${\rm Ch}_{J'}(E_J)=0$ if $J \not\subseteq J'$ and ${\rm Ch}_{J'}(E_J) = \mathrm{Pf}( \Theta_{J\setminus J'})$ otherwise
 \footnote{The operation $\mathrm{Pf}$ denotes the Pfaffian and $\Theta_{J\setminus J'}$ denotes the representation of $\Theta$ in the reduced index set $J\setminus J'$.}.
-For the case when a periodic supercell can be chosen and the magnetic texture is smooth, the higher-order Chern numbers can be obtained through integrals over Berry curvature expressions~\cite{Qi2008, Kraus2013, Su2020}.
-In~\SupplementalMaterial, we show how this result is contained in our more general framework.
+For the case when a periodic supercell can be chosen and the magnetic texture is smooth, the higher-order Chern numbers can be obtained through integrals over Berry curvature expressions~\cite{Qi2008, Kraus2013, Su2020} \revise{or they could be calculated directly in real-space from Eq.~(\ref{eq:chern_formula})}.
+In~\SupplementalMaterial, we show how \revise{the Berry curvature approach} is contained in our more general framework.
 
 
 
