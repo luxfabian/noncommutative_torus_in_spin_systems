@@ -231,16 +231,19 @@ $K$-theory classifies projection operators which can arise from this observable 
 Loosely speaking, two projections operators $P$ and $P'$ belong to the same equivalence class $[P]$ if they are related by a unitary transformation $P' = U P U^\dagger $. 
 The set of all $[P]$ defines the so-called $K_0$ group of the algebra $\mathcal{A}_\Theta$.
 %Equivalently, one could say that $P$ and $P'$ are equivalent if there exists a continuous path between them.
-For the case of $\mathcal{A}_\Theta$, the K-theoretical properties are well-understood~\cite{Prodan2016}.
-In particular, one has $K_0( \mathcal{A}_\Theta) = \mathbb{Z}^{2^{r+d-1}}$, which is a compact way of saying that any class of topologically equivalent projection operators $[P]$ can be written as a linear combination of generators $[P] =\sum_J  n_J [E_J] $, \revise{labelled by even-cardinality subsets $J$ of $\mathcal{I}=\lbrace \tau_1 \cdots, \tau_d, u_1  \cdots, u_r \rbrace$ (there are precisely $2^{r+d-1}$ such subsets), and where $n_J \in \ZM$.  \revise{
+For the case of $\mathcal{A}_\Theta$, the $K$-theoretical properties are well-understood~\cite{Prodan2016}.
+In particular, one has $K_0( \mathcal{A}_\Theta) = \mathbb{Z}^{2^{r+d-1}}$, which is a compact way of saying that any class of topologically equivalent projection operators $[P]$ can be written as a linear combination of generators $[P] =\sum_J  n_J [E_J] $, \revise{labelled by even-cardinality subsets $J$ of $\mathcal{I}=\lbrace \tau_1 \cdots, \tau_d, u_1  \cdots, u_r \rbrace$ (there are precisely $2^{r+d-1}$ such subsets).
+\revise{
+Loosely speaking, the coefficients $n_J \in \ZM$ count how often the generator $E_J$ occurs in $P$ up to unitary equivalence.
 While the projections $E_J$ could be computed in principle \cite{Rieffel1981}, the explicit knowledge of these is not necessary to compute all $n_J$.}
 
-This can be done via the noncommutative $m$-th Chern numbers ~\cite{Prodan2013b, Liu2022}
+Rather, this can be done via the noncommutative $m$-th Chern numbers ~\cite{Prodan2013b, Liu2022}.
+If $J'\subseteq \mathcal{I}$ with $|J'|/2 = m$, then 
 \begin{equation}
     {\rm Ch}_{J'}(g) = \frac{(2\pi i)^{|J'|/2}}{( |J'|/2 )!} \sum_{\sigma \in \Ss_{|J'|}} (-1)^\sigma \Tt\Big ( P \prod_{j \in J'} \partial_{\sigma_j}P \Big ) ,
     \label{eq:chern_formula}
 \end{equation}
-where for $J = \emptyset$, we define ${\rm Ch}_\emptyset(P) = \Tt(P)$. Here, $P$ is the spectral projection associated with gap $g$, and $\Tt$ is the trace per unit volume and $\Ss_{|J'|}$ is the symmetric group of order $|J|$. }
+where for $J'= \emptyset$, we define ${\rm Ch}_\emptyset(P) = \Tt(P)$. Here, $P$ is the spectral projection associated with gap $g$, and $\Tt$ is the trace per unit volume and $\Ss_{|J'|}$ is the symmetric group of order $|J|$. }
 Since we have found that the underlying observable algebra is the noncommutative torus, these numbers have to fulfill~\cite{Prodan2016}
 \begin{equation}
    {\rm Ch}_{J'} (g) =  \sum_{J \subseteq \mathcal{I} }^{|J|~\mathrm{even}}  n_J(g) \, {\rm Ch}_{J'}(E_J),
@@ -250,8 +253,7 @@ where ${\rm Ch}_{J'}(E_J)=1$ if $J=J'$,  ${\rm Ch}_{J'}(E_J)=0$ if $J \not\subse
 \footnote{The operation $\mathrm{Pf}$ denotes the Pfaffian and $\Theta_{J\setminus J'}$ denotes the representation of $\Theta$ in the reduced index set $J\setminus J'$.}.
 For the case when a periodic supercell can be chosen and the magnetic texture is smooth, the higher-order Chern numbers can be obtained through integrals over Berry curvature expressions~\cite{Qi2008, Kraus2013, Su2020} \revise{or they could be calculated directly in real-space from Eq.~(\ref{eq:chern_formula})}.
 In~\SupplementalMaterial, we show how \revise{the Berry curvature approach} is contained in our more general framework.
-
-
+\revise{ If all possible ${\rm Ch}_{J'}(g)$ would be computed via Eq.~(\ref{eq:chern_formula}), this would determine all integer invariants $n_J$ through Eq.~(\ref{eq:chern_expansion}).}
 
 \begin{figure*}[t]
  \centering
@@ -347,6 +349,7 @@ In summary, we put forward a new method to characterize electronic topological s
 In contrast to conventional methods of topological characterization based on smooth Berry phase properties $-$ whose meaning is lost in aperiodic, disordered or non-smooth textures $-$ the $K$-theory analysis can be used to predict and understand the appearance of nontrivial gaps beyond this limitation. 
 As such, the $K$-theory categorization bears great promise for unraveling and shaping the hybrid topological properties of complex spin textures in real materials.
 Particular exciting aspects to address in the future are the topology of three-dimensional textures which have the potential to harvest six-dimensional physics (nontrivial third Chern numbers are a theoretical possibility for the 3$\vec{q}$ cubic hedgehog lattice~\SupplementalMaterial), as well as the $K$-theory topological interpretation of spin fluctuations, dynamical excitations of real-space spin systems and the associated edge state physics.
+\revise{It would be further interesting to trace the evolution of topological invariants across topological magnetic phase transitions in real-space and to determine the physical observables capable of detecting the change in electronic topology.}
 
 
 %-- acknowledgements ------------------------------
