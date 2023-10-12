@@ -212,7 +212,7 @@ the sum over $\vec{j}$ visits all lattice sites, and the sum over $\vec{i}$ all 
 \revise{A detailed derivation can be found in appendix \ref{app:covariant_form}.
 Similar} reformulations are known from the Hofstadter model
 \revise{\begin{align}
-    H_\mathrm{HF} = t \sum_{\braket{\vec{i},\vec{j}} \in \mathbb{Z}^{2} \times \mathbb{Z}^2}e^{i a_{\vec{i} \vec{j}}} \ket{ \vec{i}} \bra{ \vec{j}}, % c_\vec{i}^\dagger c_\vec{j},
+    H_\mathrm{HF} = t \sum_{\braket{\vec{i},\vec{j}} \in \mathbb{Z}^{2} \times \mathbb{Z}^2}e^{i a_{\vec{i} \vec{j}}} \ket{ \vec{i}} \bra{ \vec{j}}, 
 \end{align}}
 describing electrons in a uniform magnetic field~\cite{Hofstadter1976}, where $a_{\vec{i} \vec{j}}$ is the integral of the magnetic vector potential from site $\vec{x}_\vec{i}$ to site $\vec{x}_\vec{j}$.
 One can rewrite
@@ -240,19 +240,24 @@ By defining $\boldsymbol{\alpha}=(\tau_1, \ldots, \tau_d, u_1,\ldots u_r )$, the
     \theta & 0
     \end{pmatrix} .
 \end{equation}
-The observables of the system can therefore be characterized by the universal $C^\ast$-algebra given by the presentation~\footnote{The equation uses a common shorthand notation whereby the elements before the $|$-sign are the abstract generators of the algebra and the terms following the $|$-sign are relations these generators have to fulfill.}
+The observables of the system can therefore be characterized by the universal $C^\ast$-algebra given by the presentation. 
 \begin{align}
     \mathcal{A}_\Theta &= \Braket{ \alpha_1, \cdots, \alpha_{r+d}
     |  \alpha_l \alpha_k = e^{ 2 \pi i \Theta_{lk}} \alpha_k  \alpha_l }.
 \end{align}
-This algebra is known as the \emph{noncommutative torus} in $r+d$ dimensions~\cite{Rieffel1981, Connes1994, Prodan2019}.
+\revise{The defining equation uses a common shorthand notation whereby the elements before the $|$-sign are the abstract generators of the algebra and the terms following the $|$-sign are relations these generators have to fulfill.}
+This algebra $\mathcal{A}_\Theta$ is known as the \emph{noncommutative torus} in $r+d$ dimensions~\cite{Rieffel1981, Connes1994, Prodan2019}.
 It can be interpreted as a generalization of the algebra describing the Hofstadter model, where $\Theta_{lk}$ describes generalized magnetic fluxes in the higher-dimensional space with $r$ artificial extra dimensions associated to the $\vec{q}$-vectors~\cite{Kraus2013, Ma2021}.
+\revise{
+For the $C^\ast$-algebraic details we refer to \cite{Liu2022} and \cite{Prodan2016}. Appendix \ref{app:operator_algebra} gives a brisk overview for convenience.
+}
 
 \subsection{Topological classification}
 $K$-theory classifies projection operators which can arise from this observable algebra~\cite{Park2008,Blackadar1998, Connes1994}.
 Loosely speaking, two projections operators $P$ and $P'$ belong to the same equivalence class $[P]$ if they are related by a unitary transformation $P' = U P U^\dagger $. 
 The set of all $[P]$ defines the so-called $K_0$ group of the algebra $\mathcal{A}_\Theta$.
-%Equivalently, one could say that $P$ and $P'$ are equivalent if there exists a continuous path between them.
+\revise{Equivalently, one could say that $P$ and $P'$ are equivalent if there exists a continuous path between them.
+We refer also \ref{app:k_theory} for a more nuanced look into the mathematics involved.} 
 For the case of $\mathcal{A}_\Theta$, the $K$-theoretical properties are well-understood~\cite{Prodan2016}.
 In particular, one has $K_0( \mathcal{A}_\Theta) = \mathbb{Z}^{2^{r+d-1}}$, which is a compact way of saying that any class of topologically equivalent projection operators $[P]$ can be written as a linear combination of generators $[P] =\sum_J  n_J [E_J] $, \revise{labelled by even-cardinality subsets $J$ of $\mathcal{I}=\lbrace \tau_1 \cdots, \tau_d, u_1  \cdots, u_r \rbrace$ (there are precisely $2^{r+d-1}$ such subsets).
 \revise{
@@ -280,7 +285,7 @@ If we expand $A \in \mathcal{A}_\Theta$ in terms of the algebra generators, $A =
 	\lambda_1^{q_1} \ldots\lambda_{r+d}^{q_{r+d}}
 	\alpha_1^{q_1} \ldots\alpha_{r+d}^{q_{r+d}} \in  \mathcal{A}_\Theta .
 \end{equation}
-This can be used to finally define $\partial_i A = \left. i \rho_{\boldsymbol{\lambda}} (A) \right|_{\boldsymbol{\lambda} \to 1}$.
+This can be used to finally define $\partial_i A = \left. i \rho_{\boldsymbol{\lambda}} (A) \right|_{\boldsymbol{\lambda} \to 1}$ (see also appendix \ref{app:differential_calculus}).
 The best way to gain an intuition into this technical construction is to observe what happens 
 in conventional lattice periodic systems.
 The Bloch functions can be generated from plane waves $e^{i \vec{k}\cdot \vec{x}}$ and the operation which sends $e^{i \vec{k}\cdot \vec{x}} \to i \vec{x} e^{i \vec{k}\cdot \vec{x}}$
@@ -289,7 +294,7 @@ One can therefore think of $\partial_{\tau_i}$ as a generalization of $\partial_
 }
 
 
-Since we have found that the underlying observable algebra is the noncommutative torus, these \revise{the possible Chern numbers have many interrelations and fulfill}~\cite{Prodan2016}
+Since we have found that the underlying observable algebra is the noncommutative torus, \revise{the possible Chern numbers have many interrelations and fulfill}~\cite{Prodan2016}
 \begin{equation}
    {\rm Ch}_{J'} (g) =  \sum_{J \subseteq \mathcal{I} }^{|J|~\mathrm{even}}  n_J(g) \, {\rm Ch}_{J'}(E_J),
    \label{eq:chern_expansion}
@@ -301,7 +306,7 @@ If all possible ${\rm Ch}_{J'}(g)$ would be computed via Eq.~(\ref{eq:chern_form
 We want to single out two relevant special cases of the expressions above that the reader might be familiar with and which have a clear physical interpretation.
 The first one is the case of empty subset $J'=\emptyset$, for which
 \begin{equation}
-    {\rm Ch}_{\emptyset} (g) = \Tt(P),
+    {\rm Ch}_{\emptyset} (g) = \Tt(P)
 \end{equation}
 represents the integrated density of states (IDS).
 The second important case corresponds to $J'=\lbrace \tau_i , \tau_j \rbrace$, where
@@ -310,8 +315,8 @@ The second important case corresponds to $J'=\lbrace \tau_i , \tau_j \rbrace$, w
 \end{equation}
 Based on the analogy of $\partial_{\tau_j}$ with the momentum space derivative in the lattice periodic setting, one could guess that this Chern number corresponds to the anomalous Hall conductivity $\sigma_{ij}$ of a band insulator in units of $e^2/h$. This is in fact the case \cite{Bellissard1994}.
 }
-When a periodic supercell can be chosen and the magnetic texture is smooth, all of the higher-order Chern numbers can be obtained through integrals over Berry curvature expressions~\cite{Qi2008, Kraus2013, Su2020}.
-\revise{In appendix \ref{app:berry_curvature}, we show how excatly the Berry curvature approach is contained in our more general framework.}
+When a periodic supercell can be chosen and the magnetic texture is smooth, all the higher-order Chern numbers can be obtained through integrals over Berry curvature expressions~\cite{Qi2008, Kraus2013, Su2020}.
+\revise{In appendix \ref{app:berry_curvature}, we show how exactly the Berry curvature approach is contained in our more general framework.}
 
 \begin{figure*}[t]
  \centering
@@ -341,8 +346,8 @@ $\hatn( \boldsymbol{\omega}(x_k ) )
 +\sin ( 2 \pi \omega_i(x_k) )\vec{e}_z)
 $,
 defined on a 1D lattice ($d=1$) implying $\omega_i(x_k) = k \theta_i + \varphi_i$. 
-This system could be realized physically via the proximity coupling of a 1D electronic system to two independent atomic spin spirals, each stabilizing a spin helix \footnote{One could also view it as a noncollinear spin density wave.}.
-We consider the special case of $\theta_2 = 2 \theta_1$, i.e., $\theta_1$ and $\theta_2$ are rationally dependent \footnote{Other relations between $\theta_1$ and $\theta_2$ could be considered, but will not change the qualitative results, except for $\theta_1=\theta_2$, where the spectrum is trivial.}.
+This system could be realized physically via the proximity coupling of a 1D electronic system to two independent atomic spin spirals, each stabilizing a spin helix \revise{(one could also view it as a noncollinear spin density wave)}.
+We consider the special case of $\theta_2 = 2 \theta_1$, i.e., $\theta_1$ and $\theta_2$ are rationally dependent. \revise{Other relations between $\theta_1$ and $\theta_2$ could be considered, but will not change the qualitative results, except for $\theta_1=\theta_2$, where the spectrum is trivial}.
 For this situation, the orbit of the lattice translation group generates a dense, 1D subspace on the 2-torus:  $\Omega \cong T^1 \subset T^2$ which is the hull (see Fig. \ref{fig:limacon}).
 For the numerical analysis, we consider a finite system of $N=1024$ atoms with periodic boundary conditions. 
 The spectrum $\lbrace \epsilon_n \rbrace$ is then calculated by exact diagonalization for different values of $\theta_1$, sampled at rational values $q/N$ with $q\in \mathbb{N}$ and $q \leq N$.
@@ -409,8 +414,8 @@ This serves to show that the generalized fluxes $\Theta$ can provide a connectin
 Lastly, we would like to show which predictions $K$-theory could make for three-dimensional textures such as the cubic hedgehog lattice found in $\ce{MnGe}$ \cite{Tanigaki2015}.
 In this case, one deals with three linearly independent, mutually orthogonal $\vec{q}$-vectors: $\vec{q}_i = q\vec{e}_i$.
 This means that the $\theta$-matrix is just the identity matrix in $d=3$ dimensions: $\theta = \theta_1 \id_3$. 
-A detailed overview with all Chern number relations for the cubic hedgehog lattice can be found in table \ref{tab:3q_3d} of the appendix.
-Here, $K$-theory tells us that the IDS of a gap $g$, should behave as a third-degree polynomial in $\theta_1$, with the highest order term controlled by third Chern number, i.e.,
+A detailed list with all Chern number relations for the cubic hedgehog lattice can be found in table \ref{tab:3q_3d} of the appendix.
+Here, $K$-theory tells us that the IDS of a gap $g$ should behave as a third-degree polynomial in $\theta_1$, with the highest order term controlled by third Chern number, i.e.,
 \begin{equation}
 	\mathrm{IDS}(g)
 	=
@@ -455,14 +460,515 @@ Particular exciting aspects to address in the future are the topology of three-d
 We  acknowledge  funding  under SPP 2137 ``Skyrmionics'' (project  MO  1731/7-1)  of  Deutsche  Forschungsgemeinschaft (DFG) and also gratefully thank the J\"ulich Supercomputing Center and RWTH Aachen University for providing computational resources under project jiff40. 
 This work was further supported by the Max Planck Graduate Center with the Johannes Gutenberg-Universit\"at Mainz (MPGC).
 Emil Prodan acknowledges financial support from the W.M. Keck Foundation and USA National Science Foundation through grant  DMR-1823800.
-The open source code used to generate the results of this work is available from \footnote{\url{https://github.com/luxfabian/noncommutative_torus_in_spin_systems}}.
+The open source code used to generate the results of this work is available from\footnote{\url{https://github.com/luxfabian/noncommutative_torus_in_spin_systems}}.
 }
 %-- literature ------------------------------------
 
 \hbadness=99999 
 \bibliographystyle{apsrev4-2}
-\bibliography{literature}  
-
+% \bibliography{literature}  
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+%Control: key (0)
+%Control: author (72) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{41}%
+	\makeatletter
+	\providecommand \@ifxundefined [1]{%
+	 \@ifx{#1\undefined}
+	}%
+	\providecommand \@ifnum [1]{%
+	 \ifnum #1\expandafter \@firstoftwo
+	 \else \expandafter \@secondoftwo
+	 \fi
+	}%
+	\providecommand \@ifx [1]{%
+	 \ifx #1\expandafter \@firstoftwo
+	 \else \expandafter \@secondoftwo
+	 \fi
+	}%
+	\providecommand \natexlab [1]{#1}%
+	\providecommand \enquote  [1]{``#1''}%
+	\providecommand \bibnamefont  [1]{#1}%
+	\providecommand \bibfnamefont [1]{#1}%
+	\providecommand \citenamefont [1]{#1}%
+	\providecommand \href@noop [0]{\@secondoftwo}%
+	\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+	\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+	\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+	\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+	  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+	\providecommand \@@startlink[1]{}%
+	\providecommand \@@endlink[0]{}%
+	\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+	\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+	\providecommand \urlprefix  [0]{URL }%
+	\providecommand \Eprint [0]{\href }%
+	\providecommand \doibase [0]{https://doi.org/}%
+	\providecommand \selectlanguage [0]{\@gobble}%
+	\providecommand \bibinfo  [0]{\@secondoftwo}%
+	\providecommand \bibfield  [0]{\@secondoftwo}%
+	\providecommand \translation [1]{[#1]}%
+	\providecommand \BibitemOpen [0]{}%
+	\providecommand \bibitemStop [0]{}%
+	\providecommand \bibitemNoStop [0]{.\EOS\space}%
+	\providecommand \EOS [0]{\spacefactor3000\relax}%
+	\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+	\let\auto@bib@innerbib\@empty
+	%</preamble>
+	\bibitem [{\citenamefont {Vedmedenko}\ \emph {et~al.}(2020)\citenamefont
+	  {Vedmedenko}, \citenamefont {Kawakami}, \citenamefont {Sheka}, \citenamefont
+	  {Gambardella}, \citenamefont {Kirilyuk}, \citenamefont {Hirohata},
+	  \citenamefont {Binek}, \citenamefont {Chubykalo-Fesenko}, \citenamefont
+	  {Sanvito}, \citenamefont {Kirby} \emph {et~al.}}]{Vedmedenko2020}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~Y.}\ \bibnamefont
+	  {Vedmedenko}}, \bibinfo {author} {\bibfnamefont {R.~K.}\ \bibnamefont
+	  {Kawakami}}, \bibinfo {author} {\bibfnamefont {D.~D.}\ \bibnamefont {Sheka}},
+	  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Gambardella}}, \bibinfo
+	  {author} {\bibfnamefont {A.}~\bibnamefont {Kirilyuk}}, \bibinfo {author}
+	  {\bibfnamefont {A.}~\bibnamefont {Hirohata}}, \bibinfo {author}
+	  {\bibfnamefont {C.}~\bibnamefont {Binek}}, \bibinfo {author} {\bibfnamefont
+	  {O.}~\bibnamefont {Chubykalo-Fesenko}}, \bibinfo {author} {\bibfnamefont
+	  {S.}~\bibnamefont {Sanvito}}, \bibinfo {author} {\bibfnamefont {B.~J.}\
+	  \bibnamefont {Kirby}}, \emph {et~al.},\ }\href@noop {} {\bibfield  {journal}
+	  {\bibinfo  {journal} {J. Phys. D: Appl. Phys.}\ }\textbf {\bibinfo {volume}
+	  {53}},\ \bibinfo {pages} {453001} (\bibinfo {year} {2020})}\BibitemShut
+	  {NoStop}%
+	\bibitem [{\citenamefont {Back}\ \emph {et~al.}(2020)\citenamefont {Back},
+	  \citenamefont {Cros}, \citenamefont {Ebert}, \citenamefont {Everschor-Sitte},
+	  \citenamefont {Fert}, \citenamefont {Garst}, \citenamefont {Ma},
+	  \citenamefont {Mankovsky}, \citenamefont {Monchesky}, \citenamefont
+	  {Mostovoy} \emph {et~al.}}]{Back2020}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~H.}\ \bibnamefont
+	  {Back}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Cros}}, \bibinfo
+	  {author} {\bibfnamefont {H.}~\bibnamefont {Ebert}}, \bibinfo {author}
+	  {\bibfnamefont {K.}~\bibnamefont {Everschor-Sitte}}, \bibinfo {author}
+	  {\bibfnamefont {A.}~\bibnamefont {Fert}}, \bibinfo {author} {\bibfnamefont
+	  {M.}~\bibnamefont {Garst}}, \bibinfo {author} {\bibfnamefont
+	  {T.}~\bibnamefont {Ma}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+	  {Mankovsky}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+	  {Monchesky}}, \bibinfo {author} {\bibfnamefont {M.~V.}\ \bibnamefont
+	  {Mostovoy}}, \emph {et~al.},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+	  {journal} {J. Phys. D: Appl. Phys.}\ } (\bibinfo {year} {2020})}\BibitemShut
+	  {NoStop}%
+	\bibitem [{\citenamefont {Okubo}\ \emph {et~al.}(2012)\citenamefont {Okubo},
+	  \citenamefont {Chung},\ and\ \citenamefont {Kawamura}}]{Okubo2012}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+	  {Okubo}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Chung}},\ and\
+	  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Kawamura}},\ }\href@noop
+	  {} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf
+	  {\bibinfo {volume} {108}},\ \bibinfo {pages} {017206} (\bibinfo {year}
+	  {2012})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Takagi}\ \emph {et~al.}(2018)\citenamefont {Takagi},
+	  \citenamefont {White}, \citenamefont {Hayami}, \citenamefont {Arita},
+	  \citenamefont {Honecker}, \citenamefont {R{\o}nnow}, \citenamefont {Tokura},\
+	  and\ \citenamefont {Seki}}]{Takagi2018}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+	  {Takagi}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {White}},
+	  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Hayami}}, \bibinfo
+	  {author} {\bibfnamefont {R.}~\bibnamefont {Arita}}, \bibinfo {author}
+	  {\bibfnamefont {D.}~\bibnamefont {Honecker}}, \bibinfo {author}
+	  {\bibfnamefont {H.}~\bibnamefont {R{\o}nnow}}, \bibinfo {author}
+	  {\bibfnamefont {Y.}~\bibnamefont {Tokura}},\ and\ \bibinfo {author}
+	  {\bibfnamefont {S.}~\bibnamefont {Seki}},\ }\href@noop {} {\bibfield
+	  {journal} {\bibinfo  {journal} {Sci. Adv.}\ }\textbf {\bibinfo {volume}
+	  {4}},\ \bibinfo {pages} {eaau3402} (\bibinfo {year} {2018})}\BibitemShut
+	  {NoStop}%
+	\bibitem [{\citenamefont {Hirschberger}\ \emph {et~al.}(2019)\citenamefont
+	  {Hirschberger}, \citenamefont {Nakajima}, \citenamefont {Gao}, \citenamefont
+	  {Peng}, \citenamefont {Kikkawa}, \citenamefont {Kurumaji}, \citenamefont
+	  {Kriener}, \citenamefont {Yamasaki}, \citenamefont {Sagayama}, \citenamefont
+	  {Nakao} \emph {et~al.}}]{Hirschberger2019}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+	  {Hirschberger}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+	  {Nakajima}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Gao}},
+	  \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Peng}}, \bibinfo {author}
+	  {\bibfnamefont {A.}~\bibnamefont {Kikkawa}}, \bibinfo {author} {\bibfnamefont
+	  {T.}~\bibnamefont {Kurumaji}}, \bibinfo {author} {\bibfnamefont
+	  {M.}~\bibnamefont {Kriener}}, \bibinfo {author} {\bibfnamefont
+	  {Y.}~\bibnamefont {Yamasaki}}, \bibinfo {author} {\bibfnamefont
+	  {H.}~\bibnamefont {Sagayama}}, \bibinfo {author} {\bibfnamefont
+	  {H.}~\bibnamefont {Nakao}}, \emph {et~al.},\ }\href@noop {} {\bibfield
+	  {journal} {\bibinfo  {journal} {Nat. Commun.}\ }\textbf {\bibinfo {volume}
+	  {10}},\ \bibinfo {pages} {1} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Fujishiro}\ \emph {et~al.}(2019)\citenamefont
+	  {Fujishiro}, \citenamefont {Kanazawa}, \citenamefont {Nakajima},
+	  \citenamefont {Yu}, \citenamefont {Ohishi}, \citenamefont {Kawamura},
+	  \citenamefont {Kakurai}, \citenamefont {Arima}, \citenamefont {Mitamura},
+	  \citenamefont {Miyake} \emph {et~al.}}]{Fujishiro2019}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+	  {Fujishiro}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Kanazawa}},
+	  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Nakajima}}, \bibinfo
+	  {author} {\bibfnamefont {X.}~\bibnamefont {Yu}}, \bibinfo {author}
+	  {\bibfnamefont {K.}~\bibnamefont {Ohishi}}, \bibinfo {author} {\bibfnamefont
+	  {Y.}~\bibnamefont {Kawamura}}, \bibinfo {author} {\bibfnamefont
+	  {K.}~\bibnamefont {Kakurai}}, \bibinfo {author} {\bibfnamefont
+	  {T.}~\bibnamefont {Arima}}, \bibinfo {author} {\bibfnamefont
+	  {H.}~\bibnamefont {Mitamura}}, \bibinfo {author} {\bibfnamefont
+	  {A.}~\bibnamefont {Miyake}}, \emph {et~al.},\ }\href@noop {} {\bibfield
+	  {journal} {\bibinfo  {journal} {Nat. Commun.}\ }\textbf {\bibinfo {volume}
+	  {10}},\ \bibinfo {pages} {1} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Okumura}\ \emph {et~al.}(2020)\citenamefont
+	  {Okumura}, \citenamefont {Hayami}, \citenamefont {Kato},\ and\ \citenamefont
+	  {Motome}}]{Okumura2020}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+	  {Okumura}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Hayami}},
+	  \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Kato}},\ and\ \bibinfo
+	  {author} {\bibfnamefont {Y.}~\bibnamefont {Motome}},\ }\href
+	  {https://doi.org/10.1103/PhysRevB.101.144416} {\bibfield  {journal} {\bibinfo
+	   {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {101}},\ \bibinfo
+	  {pages} {144416} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Adams}\ \emph {et~al.}(2012)\citenamefont {Adams},
+	  \citenamefont {Chacon}, \citenamefont {Wagner}, \citenamefont {Bauer},
+	  \citenamefont {Brandl}, \citenamefont {Pedersen}, \citenamefont {Berger},
+	  \citenamefont {Lemmens},\ and\ \citenamefont {Pfleiderer}}]{Adams2012}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+	  {Adams}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Chacon}},
+	  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Wagner}}, \bibinfo
+	  {author} {\bibfnamefont {A.}~\bibnamefont {Bauer}}, \bibinfo {author}
+	  {\bibfnamefont {G.}~\bibnamefont {Brandl}}, \bibinfo {author} {\bibfnamefont
+	  {B.}~\bibnamefont {Pedersen}}, \bibinfo {author} {\bibfnamefont
+	  {H.}~\bibnamefont {Berger}}, \bibinfo {author} {\bibfnamefont
+	  {P.}~\bibnamefont {Lemmens}},\ and\ \bibinfo {author} {\bibfnamefont
+	  {C.}~\bibnamefont {Pfleiderer}},\ }\href
+	  {https://doi.org/10.1103/PhysRevLett.108.237204} {\bibfield  {journal}
+	  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {108}},\
+	  \bibinfo {pages} {237204} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Janoschek}\ \emph {et~al.}(2013)\citenamefont
+	  {Janoschek}, \citenamefont {Garst}, \citenamefont {Bauer}, \citenamefont
+	  {Krautscheid}, \citenamefont {Georgii}, \citenamefont {B\"oni},\ and\
+	  \citenamefont {Pfleiderer}}]{Janoschek2013}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+	  {Janoschek}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Garst}},
+	  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Bauer}}, \bibinfo
+	  {author} {\bibfnamefont {P.}~\bibnamefont {Krautscheid}}, \bibinfo {author}
+	  {\bibfnamefont {R.}~\bibnamefont {Georgii}}, \bibinfo {author} {\bibfnamefont
+	  {P.}~\bibnamefont {B\"oni}},\ and\ \bibinfo {author} {\bibfnamefont
+	  {C.}~\bibnamefont {Pfleiderer}},\ }\href
+	  {https://doi.org/10.1103/PhysRevB.87.134407} {\bibfield  {journal} {\bibinfo
+	  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {87}},\ \bibinfo
+	  {pages} {134407} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Neubauer}\ \emph {et~al.}(2009)\citenamefont
+	  {Neubauer}, \citenamefont {Pfleiderer}, \citenamefont {Binz}, \citenamefont
+	  {Rosch}, \citenamefont {Ritz}, \citenamefont {Niklowitz},\ and\ \citenamefont
+	  {B{\"o}ni}}]{Neubauer2009}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+	  {Neubauer}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+	  {Pfleiderer}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Binz}},
+	  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Rosch}}, \bibinfo
+	  {author} {\bibfnamefont {R.}~\bibnamefont {Ritz}}, \bibinfo {author}
+	  {\bibfnamefont {P.}~\bibnamefont {Niklowitz}},\ and\ \bibinfo {author}
+	  {\bibfnamefont {P.}~\bibnamefont {B{\"o}ni}},\ }\href@noop {} {\bibfield
+	  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+	  {volume} {102}},\ \bibinfo {pages} {186602} (\bibinfo {year}
+	  {2009})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Tanigaki}\ \emph {et~al.}(2015)\citenamefont
+	  {Tanigaki}, \citenamefont {Shibata}, \citenamefont {Kanazawa}, \citenamefont
+	  {Yu}, \citenamefont {Onose}, \citenamefont {Park}, \citenamefont {Shindo},\
+	  and\ \citenamefont {Tokura}}]{Tanigaki2015}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+	  {Tanigaki}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Shibata}},
+	  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Kanazawa}}, \bibinfo
+	  {author} {\bibfnamefont {X.}~\bibnamefont {Yu}}, \bibinfo {author}
+	  {\bibfnamefont {Y.}~\bibnamefont {Onose}}, \bibinfo {author} {\bibfnamefont
+	  {H.~S.}\ \bibnamefont {Park}}, \bibinfo {author} {\bibfnamefont
+	  {D.}~\bibnamefont {Shindo}},\ and\ \bibinfo {author} {\bibfnamefont
+	  {Y.}~\bibnamefont {Tokura}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+	  {journal} {Nano Lett.}\ }\textbf {\bibinfo {volume} {15}},\ \bibinfo {pages}
+	  {5438} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Bliokh}\ and\ \citenamefont
+	  {Bliokh}(2005)}]{Bliokh2005}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+	  {Bliokh}}\ and\ \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+	  {Bliokh}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Ann.
+	  Phys.}\ }\textbf {\bibinfo {volume} {319}},\ \bibinfo {pages} {13 } (\bibinfo
+	  {year} {2005})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Fujita}\ \emph {et~al.}(2011)\citenamefont {Fujita},
+	  \citenamefont {Jalil}, \citenamefont {Tan},\ and\ \citenamefont
+	  {Murakami}}]{Fujita2011}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+	  {Fujita}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Jalil}},
+	  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Tan}},\ and\ \bibinfo
+	  {author} {\bibfnamefont {S.}~\bibnamefont {Murakami}},\ }\href@noop {}
+	  {\bibfield  {journal} {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf
+	  {\bibinfo {volume} {110}},\ \bibinfo {pages} {17} (\bibinfo {year}
+	  {2011})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Hamamoto}\ \emph {et~al.}(2015)\citenamefont
+	  {Hamamoto}, \citenamefont {Ezawa},\ and\ \citenamefont
+	  {Nagaosa}}]{Hamamoto2015}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+	  {Hamamoto}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ezawa}},\
+	  and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Nagaosa}},\ }\href
+	  {https://doi.org/10.1103/PhysRevB.92.115417} {\bibfield  {journal} {\bibinfo
+	  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {92}},\ \bibinfo
+	  {pages} {115417} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {G\"obel}\ \emph {et~al.}(2017)\citenamefont
+	  {G\"obel}, \citenamefont {Mook}, \citenamefont {Henk},\ and\ \citenamefont
+	  {Mertig}}]{Goebel2017}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+	  {G\"obel}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Mook}},
+	  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Henk}},\ and\ \bibinfo
+	  {author} {\bibfnamefont {I.}~\bibnamefont {Mertig}},\ }\href
+	  {https://doi.org/10.1103/PhysRevB.95.094413} {\bibfield  {journal} {\bibinfo
+	  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {95}},\ \bibinfo
+	  {pages} {094413} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {G{\"o}bel}\ \emph {et~al.}(2018)\citenamefont
+	  {G{\"o}bel}, \citenamefont {Mook}, \citenamefont {Henk},\ and\ \citenamefont
+	  {Mertig}}]{Goebel2018}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+	  {G{\"o}bel}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Mook}},
+	  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Henk}},\ and\ \bibinfo
+	  {author} {\bibfnamefont {I.}~\bibnamefont {Mertig}},\ }\href@noop {}
+	  {\bibfield  {journal} {\bibinfo  {journal} {Eur. Phys. J. B}\ }\textbf
+	  {\bibinfo {volume} {91}},\ \bibinfo {pages} {179} (\bibinfo {year}
+	  {2018})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Bruno}\ \emph {et~al.}(2004)\citenamefont {Bruno},
+	  \citenamefont {Dugaev},\ and\ \citenamefont {Taillefumier}}]{Bruno2004}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+	  {Bruno}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Dugaev}},\ and\
+	  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Taillefumier}},\
+	  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\
+	  }\textbf {\bibinfo {volume} {93}},\ \bibinfo {pages} {096806} (\bibinfo
+	  {year} {2004})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Everschor-Sitte}\ and\ \citenamefont
+	  {Sitte}(2014)}]{EverschorSitte2014}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+	  {Everschor-Sitte}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+	  {Sitte}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {J.
+	  Appl. Phys.}\ }\textbf {\bibinfo {volume} {115}},\ \bibinfo {pages} {172602}
+	  (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Nagaosa}\ and\ \citenamefont
+	  {Tokura}(2013)}]{Nagaosa2013}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+	  {Nagaosa}}\ and\ \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+	  {Tokura}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Nat.
+	  Nanotechnol.}\ }\textbf {\bibinfo {volume} {8}},\ \bibinfo {pages} {899}
+	  (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Ndiaye}\ \emph {et~al.}(2019)\citenamefont {Ndiaye},
+	  \citenamefont {Abbout}, \citenamefont {Goli},\ and\ \citenamefont
+	  {Manchon}}]{Ndiaye2019}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~B.}\ \bibnamefont
+	  {Ndiaye}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Abbout}},
+	  \bibinfo {author} {\bibfnamefont {V.~M. L. D.~P.}\ \bibnamefont {Goli}},\
+	  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Manchon}},\ }\href
+	  {https://doi.org/10.1103/PhysRevB.100.144440} {\bibfield  {journal} {\bibinfo
+	   {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {100}},\ \bibinfo
+	  {pages} {144440} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Feng}\ \emph {et~al.}(2020)\citenamefont {Feng},
+	  \citenamefont {Hanke}, \citenamefont {Zhou}, \citenamefont {Guo},
+	  \citenamefont {Bl{\"u}gel}, \citenamefont {Mokrousov},\ and\ \citenamefont
+	  {Yao}}]{Feng2020}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+	  {Feng}}, \bibinfo {author} {\bibfnamefont {J.-P.}\ \bibnamefont {Hanke}},
+	  \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Zhou}}, \bibinfo {author}
+	  {\bibfnamefont {G.-Y.}\ \bibnamefont {Guo}}, \bibinfo {author} {\bibfnamefont
+	  {S.}~\bibnamefont {Bl{\"u}gel}}, \bibinfo {author} {\bibfnamefont
+	  {Y.}~\bibnamefont {Mokrousov}},\ and\ \bibinfo {author} {\bibfnamefont
+	  {Y.}~\bibnamefont {Yao}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+	  {journal} {Nat. Commun.}\ }\textbf {\bibinfo {volume} {11}},\ \bibinfo
+	  {pages} {1} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Su}\ \emph {et~al.}(2020)\citenamefont {Su},
+	  \citenamefont {Hayami},\ and\ \citenamefont {Lin}}]{Su2020}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+	  {Su}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Hayami}},\ and\
+	  \bibinfo {author} {\bibfnamefont {S.-Z.}\ \bibnamefont {Lin}},\ }\href@noop
+	  {} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Research}\ }\textbf
+	  {\bibinfo {volume} {2}},\ \bibinfo {pages} {013160} (\bibinfo {year}
+	  {2020})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Bellissard}\ \emph {et~al.}(2000)\citenamefont
+	  {Bellissard}, \citenamefont {Herrmann},\ and\ \citenamefont
+	  {Zarrouati}}]{Bellissard2000}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+	  {Bellissard}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+	  {Herrmann}},\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+	  {Zarrouati}},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {Directions in
+	  Mathematical Quasicrystals}}},\ Vol.~\bibinfo {volume} {13}\ (\bibinfo
+	  {publisher} {AMS, Providence},\ \bibinfo {year} {2000})\ pp.\ \bibinfo
+	  {pages} {207--258}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Hofstadter}(1976)}]{Hofstadter1976}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~R.}\ \bibnamefont
+	  {Hofstadter}},\ }\href {https://doi.org/10.1103/PhysRevB.14.2239} {\bibfield
+	  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+	  {14}},\ \bibinfo {pages} {2239} (\bibinfo {year} {1976})}\BibitemShut
+	  {NoStop}%
+	\bibitem [{\citenamefont {Zak}(1964)}]{Zak1964}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+	  {Zak}},\ }\href {https://doi.org/10.1103/PhysRev.134.A1602} {\bibfield
+	  {journal} {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume}
+	  {134}},\ \bibinfo {pages} {A1602} (\bibinfo {year} {1964})}\BibitemShut
+	  {NoStop}%
+	\bibitem [{\citenamefont {Bellissard}\ \emph {et~al.}(1994)\citenamefont
+	  {Bellissard}, \citenamefont {van Elst},\ and\ \citenamefont
+	  {Schulz-Baldes}}]{Bellissard1994}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+	  {Bellissard}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {van
+	  Elst}},\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+	  {Schulz-Baldes}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+	  {J. Math. Phys.}\ }\textbf {\bibinfo {volume} {35}},\ \bibinfo {pages} {5373}
+	  (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Prodan}\ and\ \citenamefont
+	  {Schulz-Baldes}(2016)}]{Prodan2016}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+	  {Prodan}}\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+	  {Schulz-Baldes}},\ }\href@noop {} {\emph {\bibinfo {title} {Bulk and boundary
+	  invariants for complex topological insulators}}}\ (\bibinfo  {publisher}
+	  {Springer, Cham},\ \bibinfo {year} {2016})\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Rieffel}(1981)}]{Rieffel1981}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+	  {Rieffel}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Pac.
+	  J. Math.}\ }\textbf {\bibinfo {volume} {93}},\ \bibinfo {pages} {415}
+	  (\bibinfo {year} {1981})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Connes}(1994)}]{Connes1994}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+	  {Connes}},\ }\href@noop {} {\emph {\bibinfo {title} {Noncommutative
+	  geometry}}}\ (\bibinfo  {publisher} {Springer, San Diego},\ \bibinfo {year}
+	  {1994})\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Prodan}\ and\ \citenamefont
+	  {Shmalo}(2019)}]{Prodan2019}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+	  {Prodan}}\ and\ \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+	  {Shmalo}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {J.
+	  Geom. Phys.}\ }\textbf {\bibinfo {volume} {135}},\ \bibinfo {pages} {135}
+	  (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Kraus}\ \emph {et~al.}(2013)\citenamefont {Kraus},
+	  \citenamefont {Ringel},\ and\ \citenamefont {Zilberberg}}]{Kraus2013}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.~E.}\ \bibnamefont
+	  {Kraus}}, \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Ringel}},\ and\
+	  \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Zilberberg}},\ }\href
+	  {https://doi.org/10.1103/PhysRevLett.111.226401} {\bibfield  {journal}
+	  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {111}},\
+	  \bibinfo {pages} {226401} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Ma}\ \emph {et~al.}(2021)\citenamefont {Ma},
+	  \citenamefont {Bi}, \citenamefont {Guo}, \citenamefont {Yang}, \citenamefont
+	  {You}, \citenamefont {Feng}, \citenamefont {Sun},\ and\ \citenamefont
+	  {Zhang}}]{Ma2021}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+	  {Ma}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Bi}}, \bibinfo
+	  {author} {\bibfnamefont {Q.}~\bibnamefont {Guo}}, \bibinfo {author}
+	  {\bibfnamefont {B.}~\bibnamefont {Yang}}, \bibinfo {author} {\bibfnamefont
+	  {O.}~\bibnamefont {You}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+	  {Feng}}, \bibinfo {author} {\bibfnamefont {H.-B.}\ \bibnamefont {Sun}},\ and\
+	  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Zhang}},\ }\href
+	  {https://doi.org/10.1126/science.abi7803} {\bibfield  {journal} {\bibinfo
+	  {journal} {Science}\ }\textbf {\bibinfo {volume} {373}},\ \bibinfo {pages}
+	  {572} (\bibinfo {year} {2021})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Liu}\ \emph {et~al.}(2022)\citenamefont {Liu},
+	  \citenamefont {Santos},\ and\ \citenamefont {Prodan}}]{Liu2022}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+	  {Liu}}, \bibinfo {author} {\bibfnamefont {L.~F.}\ \bibnamefont {Santos}},\
+	  and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Prodan}},\
+	  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\
+	  }\textbf {\bibinfo {volume} {105}},\ \bibinfo {pages} {035115} (\bibinfo
+	  {year} {2022})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Park}(2008)}]{Park2008}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+	  {Park}},\ }\href@noop {} {\emph {\bibinfo {title} {Complex topological
+	  K-theory}}},\ Vol.\ \bibinfo {volume} {111}\ (\bibinfo  {publisher}
+	  {Cambridge University Press},\ \bibinfo {year} {2008})\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Blackadar}(1998)}]{Blackadar1998}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+	  {Blackadar}},\ }\href@noop {} {\emph {\bibinfo {title} {K-theory for operator
+	  algebras}}},\ Vol.~\bibinfo {volume} {5}\ (\bibinfo  {publisher} {Cambridge
+	  University Press},\ \bibinfo {year} {1998})\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Prodan}\ \emph {et~al.}(2013)\citenamefont {Prodan},
+	  \citenamefont {Leung},\ and\ \citenamefont {Bellissard}}]{Prodan2013b}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+	  {Prodan}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Leung}},\ and\
+	  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Bellissard}},\
+	  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {J. Phys. A}\
+	  }\textbf {\bibinfo {volume} {46}},\ \bibinfo {pages} {485202} (\bibinfo
+	  {year} {2013})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Qi}\ \emph {et~al.}(2008)\citenamefont {Qi},
+	  \citenamefont {Hughes},\ and\ \citenamefont {Zhang}}]{Qi2008}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {X.-L.}\ \bibnamefont
+	  {Qi}}, \bibinfo {author} {\bibfnamefont {T.~L.}\ \bibnamefont {Hughes}},\
+	  and\ \bibinfo {author} {\bibfnamefont {S.-C.}\ \bibnamefont {Zhang}},\
+	  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\
+	  }\textbf {\bibinfo {volume} {78}},\ \bibinfo {pages} {195424} (\bibinfo
+	  {year} {2008})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Schulz}\ \emph {et~al.}(2012)\citenamefont {Schulz},
+	  \citenamefont {Ritz}, \citenamefont {Bauer}, \citenamefont {Halder},
+	  \citenamefont {Wagner}, \citenamefont {Franz}, \citenamefont {Pfleiderer},
+	  \citenamefont {Everschor}, \citenamefont {Garst},\ and\ \citenamefont
+	  {Rosch}}]{Schulz2012}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+	  {Schulz}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Ritz}},
+	  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Bauer}}, \bibinfo
+	  {author} {\bibfnamefont {M.}~\bibnamefont {Halder}}, \bibinfo {author}
+	  {\bibfnamefont {M.}~\bibnamefont {Wagner}}, \bibinfo {author} {\bibfnamefont
+	  {C.}~\bibnamefont {Franz}}, \bibinfo {author} {\bibfnamefont
+	  {C.}~\bibnamefont {Pfleiderer}}, \bibinfo {author} {\bibfnamefont
+	  {K.}~\bibnamefont {Everschor}}, \bibinfo {author} {\bibfnamefont
+	  {M.}~\bibnamefont {Garst}},\ and\ \bibinfo {author} {\bibfnamefont
+	  {A.}~\bibnamefont {Rosch}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+	  {journal} {Nat. Phys.}\ }\textbf {\bibinfo {volume} {8}},\ \bibinfo {pages}
+	  {301} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Prodan}(2017)}]{Prodan2017}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+	  {Prodan}},\ }\href@noop {} {\emph {\bibinfo {title} {A computational
+	  non-commutative geometry program for disordered topological insulators}}},\
+	  Vol.~\bibinfo {volume} {23}\ (\bibinfo  {publisher} {Springer},\ \bibinfo
+	  {year} {2017})\ p.~\bibinfo {pages} {45}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Wang}\ \emph {et~al.}(2015)\citenamefont {Wang},
+	  \citenamefont {Kamiya}, \citenamefont {Nevidomskyy},\ and\ \citenamefont
+	  {Batista}}]{Wang2015}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont
+	  {Wang}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Kamiya}},
+	  \bibinfo {author} {\bibfnamefont {A.~H.}\ \bibnamefont {Nevidomskyy}},\ and\
+	  \bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont {Batista}},\ }\href
+	  {https://doi.org/10.1103/PhysRevLett.115.107201} {\bibfield  {journal}
+	  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {115}},\
+	  \bibinfo {pages} {107201} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+	\bibitem [{Note1()}]{Note1}%
+	  \BibitemOpen
+	  \bibinfo {note} {\protect \url
+	  {https://github.com/luxfabian/noncommutative_torus_in_spin_systems}}\BibitemShut
+	  {NoStop}%
+\end{thebibliography}%
+	
 
 \appendix
 
@@ -599,22 +1105,6 @@ with the definition
 		\end{array}
 	\right.
 \end{equation}
-
-% Since we define $\vec{q}_i = \sum_{j=1}^d \theta_{ij} \vec{b}_j$ (with $\theta$ being a $r\times d$-dimensional matrix), one has
-% \begin{align}
-% 	\vec{x}_\vec{k} \cdot \vec{q}_l
-% 	&= \Big( \sum_i  k_i \vec{a}_i\Big) \cdot \Big(\sum_{j=1}^d \theta_{lj} \vec{b}_j \Big)
-% 	\notag \\
-% 	&= 2 \pi  \sum_i k_i  \theta_{li}
-% 	\notag \\
-% 	& \equiv 2 \pi  \vec{k} \cdot \boldsymbol{\theta}_l,
-% \end{align}
-% where $\boldsymbol{\theta}_l$ is the $l$-th column vector of $\theta_{li}$.
-% From this follows
-% \begin{equation}
-%  \frac{1}{( 2\pi) }	\vec{x}_{\vec{k} + \vec{m}} \cdot \vec{q}_l 
-% 	= (\theta \vec{m})_l .
-% \end{equation}
 
 
 \section{Derivation of the torus commutation relation}
@@ -783,23 +1273,6 @@ As such, there are $2^{\deff-1}$ generators $[E_J]$, which can be uniquely label
 where the coefficients $n_J$ are integer numbers that do not change as long as $p$ is deformed inside its $K_0$-class. 
 Specifically, two homotopically equivalent projections will display the same coefficients, hence $\{n_J\}_{|J|={\rm even}}$ represent the {\it complete} set of topological invariants associated to the projection $p$. 
 Furthermore, two projections that display the same set of coefficients are necessarily in the same $K_0$-class. 
-%Let us point out that the coefficient $n_J$ corresponding to $J=\{1,2,\ldots,\deff \}$ is called the top coefficient and is equal to the strong Chern number associated to the projection $p$ \cite[Sec.~5.7]{Prodan2016}.
-
-% \vspace{0.2cm}
-
-% The second group of the complex $K$-theory is $K_1(\Aa_\Theta)$, which classifies the unitary elements
-% \begin{equation}
-% u \in \Mm_\infty \otimes \Aa_\Theta, \quad u u^\ast = u^\ast u=1,
-% \end{equation}
-% with respect to the homotopy equivalence relation. The class of $u\in \Mm_\infty \otimes \Aa_\Theta$ will be denoted by $[u]_1$. For the noncommutative $d$-torus,
-% \begin{equation}
-% K_1(\Aa_\Theta) = \ZM^{2^{\deff-1}},
-% \end{equation}
-% regardless of $\Theta$. Again, there are $2^{\deff-1}$ generators $[u_J]_1$, which can be uniquely labeled by the subsets of indices $J \subseteq \{1,\ldots,d\}$ of odd cardinality \cite{ProdanSpringer2016}. This assures us that, for any unitary $u$ from $\Mm_\infty \otimes \Aa_\Theta$, one has
-% \begin{equation}
-% [u]_1  =\sum_{J \subseteq \{1,\ldots,\deff \}}^{|J|={\rm odd}} n_J \, [u_J]_1,
-% \end{equation} 
-% and the coefficients $n_J$ are again integer numbers that do not change as long as $u$ is deformed inside its class. Specifically, two homotopic unitaries will display the same coefficients, hence $\{n_J\}_{|J|={\rm odd}}$ represent the complete set of topological invariants associated to $u$.  
 
 \section{Differential calculus on the noncommutative torus}
 \label{app:differential_calculus}
@@ -846,34 +1319,6 @@ For the $\tau$-derivations, the representation on the Hilbert space evaluates to
 	\pi_{\boldsymbol{\phi}} (\partial_{\tau_k} A) = i [ \hat{X}_k, \pi_{\boldsymbol{\phi}} (A)],
 \end{align}
 where $\hat{\vec{X}} = \sum_{\vec{q}\in \mathbb{Z}^d} \vec{x}_{\vec{q}}\ket{\vec{q}} \bra{\vec{q}}$ is the position operator on the Hilbert space.
-
-
-% For an operator $\hat{A} = \pi_{\boldsymbol{\phi}} (A)$, we define the crystal momentum representation
-% \begin{equation}
-% 	\hat{A}_{\vec{k}} = e^{-i \vec{k} \cdot \hat{\vec{X}}}\hat{A}  e^{i \vec{k} \cdot \hat{\vec{X}}},
-% \end{equation}
-% and therefore
-% \begin{align}
-% 	\partial_{k_j} \hat{A}_{\vec{k}} &= -i [ \hat{X}_j, \hat{A}_{\vec{k}}] = -e^{-i \vec{k} \cdot \hat{\vec{X}}} i [ \hat{X}_j, \hat{A}] e^{i \vec{k} \cdot \hat{\vec{X}}}
-% 	= - ( \pi_{\boldsymbol{\phi}}(\partial_{\tau_j} A) )_{\vec{k}}
-% \notag \\
-% \partial_{\phi_j} \hat{A}_{\vec{k}} &= 2 \pi ( \pi_{\boldsymbol{\phi}}(\partial_{u_j} A) )_{\vec{k}}
-% \end{align}
-% If the multi-$\vec{q}$ texture is commensurate with the lattice, a Bloch basis can be chosen:
-% \begin{align}
-% 	\psi_{\vec{k} \vec{q} \alpha}(\vec{r}) = \frac{1}{\sqrt{N}}
-% 	\sum_{\vec{R}} e^{i \vec{k}\cdot \vec{R}} \phi_{\vec{q},\alpha}(\vec{r}-\vec{R}),
-% \end{align}
-% where $\vec{R}$ describes the lattice of the superstructure and $\phi_{\vec{q}}$ is the orbital wave function localized at atomic site $\vec{x}_{\vec{q}}$ in the superstructure.
-% We introduce the new basis notation for the orbital wave functions
-% \begin{equation}
-% 	\ket{\vec{R}, \vec{q}, \alpha} = \ket{\vec{R}+\vec{x}_{\vec{q}}, \alpha} ,
-% \end{equation}
-% where we identify
-% \begin{equation}
-% 	\braket{\vec{r}, \beta | \vec{R}, \vec{q}, \alpha} = \delta_{\alpha, \beta}~\phi_{\vec{q},\alpha}(\vec{r}-\vec{R}) .
-% \end{equation}
-% The lattice fourier transform (Wannier basis) is given by:
 
 \section{Relation to Berry curvature}
 \label{app:berry_curvature}
@@ -1236,8 +1681,6 @@ The emergent flux in this case is
 	&=\pm 2 \pi \frac{\hbar}{ e}  \mathcal{Q} .
 \end{align}
 
-
-% {\bf Transformed translation operator in two dimensions}. 
 Applying the translation operator to the previously defined unitary operator, we find
 \begin{align}
 	\hat{T}_\vec{m} U( \hat{\vec{x}}) \hat{T}_\vec{m}^\dagger
@@ -1389,45 +1832,6 @@ J' & \mathrm{Ch}_{J'} \\ \toprule
 \label{tab:2q_2d}
 \end{table}
     
-
-% \section{The \texorpdfstring{$\Theta$}{Theta}-matrix on the cubic hedgehog lattice}
-% \label{app:theta_matrix_cubic_hedgehog}
-
-% In the case of the cubic hedgehog lattice, one deals with three linearly independent, mutually orthogonal $\vec{q}$-vectors: $\vec{q}_i = q\vec{e}_i$.
-% This means that the $\theta$-matrix is just the identity in $d=3$ dimensions: $\theta = \theta_1 \id_3$. 
-% Table \ref{tab:3q_3d} summarizes the possible Chern numbers in this case.
-% Noteworthy is the emergence of a third Chern numbers in the IDS:
-% \begin{equation}
-% 	\mathrm{IDS}(g)
-% 	=
-% 	n_\emptyset
-% 	+ n_{\tau u} \theta_1 
-% 	+ n_{\tau^2 u^2} \theta_1^2
-% 	+ n_{\tau^3 u^3} \theta_1^3,
-% \end{equation}
-% with the shorthand notation 
-% \begin{align}
-% n_{\tau u}  
-% & = n_{\lbrace \tau_1 u_1 \rbrace}  + n_{\lbrace \tau_2 u_2 \rbrace} + n_{\lbrace \tau_3 u_3 \rbrace} 
-% \\
-% n_{\tau^2 u^2}  
-% & = n_{\lbrace \tau_1 \tau_2 u_1 u_2 \rbrace}  
-% + n_{\lbrace \tau_1 \tau_3 u_1 u_3 \rbrace}   
-% + n_{\lbrace \tau_2 \tau_3 u_2 u_3 \rbrace}   
-% \\
-% n_{\tau^3 u^3}  
-% & = n_{\lbrace \tau_1 \tau_2 \tau_3 u_1 u_2 u_3 \rbrace}.
-% \end{align}
-% The latter can be identified with the top-level Chern number
-% \begin{equation}
-% 	\mathrm{Ch}_{\lbrace \tau_1 \tau_2 \tau_3 u_1 u_2 u_3 \rbrace}
-% 	=
-% 	n_{\lbrace \tau_1 \tau_2 \tau_3 u_1 u_2 u_3 \rbrace}.
-% \end{equation} 
-
-
-
-
 \clearpage
 
 \hfuzz=280pt
