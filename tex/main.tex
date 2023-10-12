@@ -46,7 +46,8 @@
 
 \newcommand{\SupplementalMaterial}{\cite{Note1}}
 
-\newcommand{\revise}[1]{{\color{red} #1}}
+% \newcommand{\revise}[1]{{\color{red} #1}}
+\newcommand{\revise}[1]{{ #1}}
 \newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
 
 %====================================================
@@ -1527,7 +1528,8 @@ P_{\vec{k}}(\boldsymbol{\phi})
 \tr_\sigma ~F_{\alpha \beta}(\vec{k}, \boldsymbol{\phi}) F_{\gamma\delta}(\vec{k}, \boldsymbol{\phi}) .
 \end{align}
 \end{widetext}   
-Inserting this result into the expression for the Chern number gives
+\vfill
+Inserting this result into the expression for the Chern number gives 
 \begin{align}
 	&{\rm Ch}_{J}(g) = \frac{1}{8 }\sum_{\vec{q}}
     \int\limits_{\mathrm{1.BZ}} \frac{\dd^d \vec{k}}{(2\pi)^d}~ \epsilon^{\alpha\beta\gamma\delta}
@@ -1538,7 +1540,9 @@ Inserting this result into the expression for the Chern number gives
  & = \frac{1}{32 \pi^2}\sum_{\vec{q}}
  \int\limits_{\mathrm{1.BZ}}\dd^d \vec{k} ~ \epsilon^{\alpha\beta\gamma\delta}
  \tr_\sigma F_{\alpha \beta}(\vec{k}, \tau_{-\vec{q}}\boldsymbol{\phi}) F_{\gamma\delta}(\vec{k}, \tau_{-\vec{q}}\boldsymbol{\phi}) 
- \notag \\
+\end{align}
+Taking the limit of smooth textures of this expression, one then obtains
+\begin{align}
  & \to \frac{1}{32 \pi^2} \int\limits_{\Omega} \dd^r\boldsymbol{\phi}
  \int\limits_{\mathrm{1.BZ}} \dd^d \vec{k} ~ \epsilon^{\alpha\beta\gamma\delta}
  \tr_\sigma F_{\alpha \beta}(\vec{k},\boldsymbol{\phi}) F_{\gamma\delta}(\vec{k}, \boldsymbol{\phi}) 
