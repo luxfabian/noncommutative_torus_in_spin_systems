@@ -34,6 +34,9 @@ JJ:= Array[ Complement[J[[#1]], J[[#2]] ]&, {Length[J], Length[J] } ];
 (*From these, the Chern numbers can be calculated*)
 
 
+Pf[x_]:=ResourceFunction["Pfaffian"][x, Method->"Pauli"];
+
+
 (* ::Input::Initialization:: *)
 ChernElem[i_,j_]:=(
 
@@ -43,7 +46,7 @@ If[ J[[i]] == J[[j]] , Return[1] ];
 If[ len==0, Return[0  ] ]; 
 
 (*Pfaffian*)
-Return[ Sqrt[ Det[ \[CapitalPhi][i,j]]]]; 
+Return[ Pf[\[CapitalPhi][i,j]]]; 
 
 )
 
@@ -105,6 +108,8 @@ svars=DeleteCases[ Subsets[vars], {}] ;
 J = Join[{{}},Select[ svars, EvenQ[Length[#]] &]];
 
 tmat = \[Theta]{{0,1},{1,0}};
+tmat = \[Theta] IdentityMatrix[2];
+
 $Assumptions={\[Theta]>0};
 
 th[t[i_], u[j_] ]:=tmat  [[j,i]];
@@ -160,6 +165,9 @@ th[t[i_], t[j_] ]:= 0
 ct = ChernTable// Expand;
 
 
+ct//MatrixForm
+
+
 eqs = Table[ Ch[ct[[i]][[1]]] == ct[[i]] [[2]] , {i, 1, Length[J]} ] ;
 X =  Table[ n[J[[i]]]  , {i, 1, Length[J]} ] ;
 Y =  Table[ Ch[J[[i]]]  , {i, 1, Length[J]} ] ;
@@ -196,6 +204,12 @@ th[t[i_], u[j_] ]:=tmat  [[j,i]];
 th[u[j_], t[i_] ]:=-tmat  [[j,i]]
 th[u[i_], u[j_] ]:= 0
 th[t[i_], t[j_] ]:= 0
+
+
+ct = ChernTable// Expand //MatrixForm
+
+
+ ct /.{\[Theta]^2-> - \[Theta]^2, \[Theta]^3 -> - \[Theta]^3} //MatrixForm
 
 
 Chern[1] //Simplify // Expand
